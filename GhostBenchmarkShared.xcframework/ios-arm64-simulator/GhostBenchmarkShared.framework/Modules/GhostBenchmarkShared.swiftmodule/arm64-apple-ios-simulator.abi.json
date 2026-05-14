@@ -1,0 +1,2923 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "GhostBenchmarkShared",
+    "printedName": "GhostBenchmarkShared",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KotlinKVariance",
+        "printedName": "KotlinKVariance",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invariant",
+            "printedName": "invariant",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GhostBenchmarkShared.KotlinKVariance.Type) -> GhostBenchmarkShared.KotlinKVariance",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                    "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KotlinKVariance",
+                        "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                        "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO9invariantyA2CmF",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO9invariantyA2CmF",
+            "moduleName": "GhostBenchmarkShared",
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "in",
+            "printedName": "in",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GhostBenchmarkShared.KotlinKVariance.Type) -> GhostBenchmarkShared.KotlinKVariance",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                    "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KotlinKVariance",
+                        "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                        "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO2inyA2CmF",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO2inyA2CmF",
+            "moduleName": "GhostBenchmarkShared",
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "out",
+            "printedName": "out",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GhostBenchmarkShared.KotlinKVariance.Type) -> GhostBenchmarkShared.KotlinKVariance",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                    "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KotlinKVariance",
+                        "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                        "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO3outyA2CmF",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO3outyA2CmF",
+            "moduleName": "GhostBenchmarkShared",
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO4nameSSvp",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO4nameSSvp",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO4nameSSvg",
+                "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO4nameSSvg",
+                "moduleName": "GhostBenchmarkShared",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ordinal",
+            "printedName": "ordinal",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO7ordinals5Int32Vvp",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO7ordinals5Int32Vvp",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO7ordinals5Int32Vvg",
+                "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO7ordinals5Int32Vvg",
+                "moduleName": "GhostBenchmarkShared",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "_forceBridgeFromObjectiveC",
+            "printedName": "_forceBridgeFromObjectiveC(_:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "__KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.__KotlinKVariance",
+                "usr": "c:objc(cs)GBSKotlinKVariance"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GhostBenchmarkShared.KotlinKVariance?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                    "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                  }
+                ],
+                "paramValueOwnership": "InOut",
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO26_forceBridgeFromObjectiveC_6resultySo09GBSKotlinE0C_ACSgztFZ",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO26_forceBridgeFromObjectiveC_6resultySo09GBSKotlinE0C_ACSgztFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "_conditionallyBridgeFromObjectiveC",
+            "printedName": "_conditionallyBridgeFromObjectiveC(_:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "__KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.__KotlinKVariance",
+                "usr": "c:objc(cs)GBSKotlinKVariance"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GhostBenchmarkShared.KotlinKVariance?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                    "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                  }
+                ],
+                "paramValueOwnership": "InOut",
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO34_conditionallyBridgeFromObjectiveC_6resultSbSo09GBSKotlinE0C_ACSgztFZ",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO34_conditionallyBridgeFromObjectiveC_6resultSbSo09GBSKotlinE0C_ACSgztFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "_unconditionallyBridgeFromObjectiveC",
+            "printedName": "_unconditionallyBridgeFromObjectiveC(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GhostBenchmarkShared.__KotlinKVariance?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "__KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.__KotlinKVariance",
+                    "usr": "c:objc(cs)GBSKotlinKVariance"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO36_unconditionallyBridgeFromObjectiveCyACSo09GBSKotlinE0CSgFZ",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO36_unconditionallyBridgeFromObjectiveCyACSo09GBSKotlinE0CSgFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "_bridgeToObjectiveC",
+            "printedName": "_bridgeToObjectiveC()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "__KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.__KotlinKVariance",
+                "usr": "c:objc(cs)GBSKotlinKVariance"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO19_bridgeToObjectiveCSo09GBSKotlinE0CyF",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO19_bridgeToObjectiveCSo09GBSKotlinE0CyF",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO2eeoiySbAC_ACtFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO9hashValueSivp",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO9hashValueSivp",
+            "moduleName": "GhostBenchmarkShared",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO9hashValueSivg",
+                "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO9hashValueSivg",
+                "moduleName": "GhostBenchmarkShared",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO4hash4intoys6HasherVz_tF",
+            "moduleName": "GhostBenchmarkShared",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[GhostBenchmarkShared.KotlinKVariance]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                    "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO8allCasesSayACGvpZ",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO8allCasesSayACGvpZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[GhostBenchmarkShared.KotlinKVariance]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KotlinKVariance",
+                        "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                        "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO8allCasesSayACGvgZ",
+                "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO8allCasesSayACGvgZ",
+                "moduleName": "GhostBenchmarkShared",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "toKotlinEnum",
+            "printedName": "toKotlinEnum()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "__KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.__KotlinKVariance",
+                "usr": "c:objc(cs)GBSKotlinKVariance"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO02toD4EnumSo09GBSKotlinE0CyF",
+            "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO02toD4EnumSo09GBSKotlinE0CyF",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO",
+        "mangledName": "$s20GhostBenchmarkShared15KotlinKVarianceO",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen"
+        ],
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "__KotlinKVariance",
+                    "printedName": "GhostBenchmarkShared.__KotlinKVariance",
+                    "usr": "c:objc(cs)GBSKotlinKVariance"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[GhostBenchmarkShared.KotlinKVariance]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KotlinKVariance",
+                        "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                        "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CharacterStatus",
+        "printedName": "CharacterStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "alive",
+            "printedName": "alive",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GhostBenchmarkShared.CharacterStatus.Type) -> GhostBenchmarkShared.CharacterStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus",
+                    "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CharacterStatus",
+                        "printedName": "GhostBenchmarkShared.CharacterStatus",
+                        "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO5aliveyA2CmF",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO5aliveyA2CmF",
+            "moduleName": "GhostBenchmarkShared",
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "dead",
+            "printedName": "dead",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GhostBenchmarkShared.CharacterStatus.Type) -> GhostBenchmarkShared.CharacterStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus",
+                    "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CharacterStatus",
+                        "printedName": "GhostBenchmarkShared.CharacterStatus",
+                        "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO4deadyA2CmF",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO4deadyA2CmF",
+            "moduleName": "GhostBenchmarkShared",
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GhostBenchmarkShared.CharacterStatus.Type) -> GhostBenchmarkShared.CharacterStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus",
+                    "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CharacterStatus",
+                        "printedName": "GhostBenchmarkShared.CharacterStatus",
+                        "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO7unknownyA2CmF",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO7unknownyA2CmF",
+            "moduleName": "GhostBenchmarkShared",
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO4nameSSvp",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO4nameSSvp",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO4nameSSvg",
+                "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO4nameSSvg",
+                "moduleName": "GhostBenchmarkShared",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ordinal",
+            "printedName": "ordinal",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO7ordinals5Int32Vvp",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO7ordinals5Int32Vvp",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO7ordinals5Int32Vvg",
+                "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO7ordinals5Int32Vvg",
+                "moduleName": "GhostBenchmarkShared",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "_forceBridgeFromObjectiveC",
+            "printedName": "_forceBridgeFromObjectiveC(_:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "__CharacterStatus",
+                "printedName": "GhostBenchmarkShared.__CharacterStatus",
+                "usr": "c:objc(cs)GBSCharacterStatus"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GhostBenchmarkShared.CharacterStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus",
+                    "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                  }
+                ],
+                "paramValueOwnership": "InOut",
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO26_forceBridgeFromObjectiveC_6resultySo012GBSCharacterE0C_ACSgztFZ",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO26_forceBridgeFromObjectiveC_6resultySo012GBSCharacterE0C_ACSgztFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "_conditionallyBridgeFromObjectiveC",
+            "printedName": "_conditionallyBridgeFromObjectiveC(_:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "__CharacterStatus",
+                "printedName": "GhostBenchmarkShared.__CharacterStatus",
+                "usr": "c:objc(cs)GBSCharacterStatus"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GhostBenchmarkShared.CharacterStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus",
+                    "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                  }
+                ],
+                "paramValueOwnership": "InOut",
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO34_conditionallyBridgeFromObjectiveC_6resultSbSo012GBSCharacterE0C_ACSgztFZ",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO34_conditionallyBridgeFromObjectiveC_6resultSbSo012GBSCharacterE0C_ACSgztFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "_unconditionallyBridgeFromObjectiveC",
+            "printedName": "_unconditionallyBridgeFromObjectiveC(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CharacterStatus",
+                "printedName": "GhostBenchmarkShared.CharacterStatus",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GhostBenchmarkShared.__CharacterStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "__CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.__CharacterStatus",
+                    "usr": "c:objc(cs)GBSCharacterStatus"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO36_unconditionallyBridgeFromObjectiveCyACSo012GBSCharacterE0CSgFZ",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO36_unconditionallyBridgeFromObjectiveCyACSo012GBSCharacterE0CSgFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "_bridgeToObjectiveC",
+            "printedName": "_bridgeToObjectiveC()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "__CharacterStatus",
+                "printedName": "GhostBenchmarkShared.__CharacterStatus",
+                "usr": "c:objc(cs)GBSCharacterStatus"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO19_bridgeToObjectiveCSo012GBSCharacterE0CyF",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO19_bridgeToObjectiveCSo012GBSCharacterE0CyF",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CharacterStatus",
+                "printedName": "GhostBenchmarkShared.CharacterStatus",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CharacterStatus",
+                "printedName": "GhostBenchmarkShared.CharacterStatus",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO2eeoiySbAC_ACtFZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO9hashValueSivp",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO9hashValueSivp",
+            "moduleName": "GhostBenchmarkShared",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO9hashValueSivg",
+                "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO9hashValueSivg",
+                "moduleName": "GhostBenchmarkShared",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO4hash4intoys6HasherVz_tF",
+            "moduleName": "GhostBenchmarkShared",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[GhostBenchmarkShared.CharacterStatus]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.CharacterStatus",
+                    "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO8allCasesSayACGvpZ",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO8allCasesSayACGvpZ",
+            "moduleName": "GhostBenchmarkShared",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[GhostBenchmarkShared.CharacterStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CharacterStatus",
+                        "printedName": "GhostBenchmarkShared.CharacterStatus",
+                        "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO8allCasesSayACGvgZ",
+                "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO8allCasesSayACGvgZ",
+                "moduleName": "GhostBenchmarkShared",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "toKotlinEnum",
+            "printedName": "toKotlinEnum()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "__CharacterStatus",
+                "printedName": "GhostBenchmarkShared.__CharacterStatus",
+                "usr": "c:objc(cs)GBSCharacterStatus"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20GhostBenchmarkShared15CharacterStatusO12toKotlinEnumSo012GBSCharacterE0CyF",
+            "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO12toKotlinEnumSo012GBSCharacterE0CyF",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20GhostBenchmarkShared15CharacterStatusO",
+        "mangledName": "$s20GhostBenchmarkShared15CharacterStatusO",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen"
+        ],
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "__CharacterStatus",
+                    "printedName": "GhostBenchmarkShared.__CharacterStatus",
+                    "usr": "c:objc(cs)GBSCharacterStatus"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[GhostBenchmarkShared.CharacterStatus]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CharacterStatus",
+                        "printedName": "GhostBenchmarkShared.CharacterStatus",
+                        "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Skie",
+        "printedName": "Skie",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Okio",
+            "printedName": "Okio",
+            "children": [
+              {
+                "kind": "TypeDecl",
+                "name": "BufferedSink",
+                "printedName": "BufferedSink",
+                "children": [
+                  {
+                    "kind": "TypeDecl",
+                    "name": "__Sealed",
+                    "printedName": "__Sealed",
+                    "children": [
+                      {
+                        "kind": "Var",
+                        "name": "buffer",
+                        "printedName": "buffer",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed.Type) -> (GhostBenchmarkShared.OkioBuffer) -> GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                            "children": [
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(GhostBenchmarkShared.OkioBuffer) -> GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "OkioBuffer",
+                                    "printedName": "GhostBenchmarkShared.OkioBuffer",
+                                    "usr": "c:objc(cs)GBSOkioBuffer"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Metatype",
+                                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed.Type",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "declKind": "EnumElement",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO6bufferyAISo13GBSOkioBufferCcAImF",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO6bufferyAISo13GBSOkioBufferCcAImF",
+                        "moduleName": "GhostBenchmarkShared",
+                        "fixedbinaryorder": 0
+                      },
+                      {
+                        "kind": "Var",
+                        "name": "else",
+                        "printedName": "else",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed.Type) -> GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "__Sealed",
+                                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                                "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Metatype",
+                                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed.Type",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "declKind": "EnumElement",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO4elseyA2ImF",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO4elseyA2ImF",
+                        "moduleName": "GhostBenchmarkShared",
+                        "fixedbinaryorder": 1
+                      },
+                      {
+                        "kind": "Var",
+                        "name": "hashValue",
+                        "printedName": "hashValue",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "declKind": "Var",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO9hashValueSivp",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO9hashValueSivp",
+                        "moduleName": "GhostBenchmarkShared",
+                        "implicit": true,
+                        "accessors": [
+                          {
+                            "kind": "Accessor",
+                            "name": "Get",
+                            "printedName": "Get()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              }
+                            ],
+                            "declKind": "Accessor",
+                            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO9hashValueSivg",
+                            "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO9hashValueSivg",
+                            "moduleName": "GhostBenchmarkShared",
+                            "implicit": true,
+                            "accessorKind": "get"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "Function",
+                        "name": "hash",
+                        "printedName": "hash(into:)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Hasher",
+                            "printedName": "Swift.Hasher",
+                            "paramValueOwnership": "InOut",
+                            "usr": "s:s6HasherV"
+                          }
+                        ],
+                        "declKind": "Func",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO4hash4intoys6HasherVz_tF",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO4hash4intoys6HasherVz_tF",
+                        "moduleName": "GhostBenchmarkShared",
+                        "implicit": true,
+                        "funcSelfKind": "NonMutating"
+                      },
+                      {
+                        "kind": "Function",
+                        "name": "==",
+                        "printedName": "==(_:_:)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "__Sealed",
+                            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "__Sealed",
+                            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+                          }
+                        ],
+                        "declKind": "Func",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO2eeoiySbAI_AItFZ",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO2eeoiySbAI_AItFZ",
+                        "moduleName": "GhostBenchmarkShared",
+                        "static": true,
+                        "implicit": true,
+                        "funcSelfKind": "NonMutating"
+                      }
+                    ],
+                    "declKind": "Enum",
+                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO",
+                    "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO",
+                    "moduleName": "GhostBenchmarkShared",
+                    "declAttributes": [
+                      "AccessControl",
+                      "Frozen"
+                    ],
+                    "isFromExtension": true,
+                    "isEnumExhaustive": true,
+                    "conformances": [
+                      {
+                        "kind": "Conformance",
+                        "name": "Copyable",
+                        "printedName": "Copyable",
+                        "usr": "s:s8CopyableP",
+                        "mangledName": "$ss8CopyableP"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Escapable",
+                        "printedName": "Escapable",
+                        "usr": "s:s9EscapableP",
+                        "mangledName": "$ss9EscapableP"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Hashable",
+                        "printedName": "Hashable",
+                        "usr": "s:SH",
+                        "mangledName": "$sSH"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Equatable",
+                        "printedName": "Equatable",
+                        "usr": "s:SQ",
+                        "mangledName": "$sSQ"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Enum",
+                "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO",
+                "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO",
+                "moduleName": "GhostBenchmarkShared",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "conformances": [
+                  {
+                    "kind": "Conformance",
+                    "name": "Copyable",
+                    "printedName": "Copyable",
+                    "usr": "s:s8CopyableP",
+                    "mangledName": "$ss8CopyableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Escapable",
+                    "printedName": "Escapable",
+                    "usr": "s:s9EscapableP",
+                    "mangledName": "$ss9EscapableP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeDecl",
+                "name": "BufferedSource",
+                "printedName": "BufferedSource",
+                "children": [
+                  {
+                    "kind": "TypeDecl",
+                    "name": "__Sealed",
+                    "printedName": "__Sealed",
+                    "children": [
+                      {
+                        "kind": "Var",
+                        "name": "buffer",
+                        "printedName": "buffer",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed.Type) -> (GhostBenchmarkShared.OkioBuffer) -> GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                            "children": [
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(GhostBenchmarkShared.OkioBuffer) -> GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "OkioBuffer",
+                                    "printedName": "GhostBenchmarkShared.OkioBuffer",
+                                    "usr": "c:objc(cs)GBSOkioBuffer"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Metatype",
+                                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed.Type",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "declKind": "EnumElement",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO6bufferyAISo13GBSOkioBufferCcAImF",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO6bufferyAISo13GBSOkioBufferCcAImF",
+                        "moduleName": "GhostBenchmarkShared",
+                        "fixedbinaryorder": 0
+                      },
+                      {
+                        "kind": "Var",
+                        "name": "else",
+                        "printedName": "else",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed.Type) -> GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "__Sealed",
+                                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                                "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Metatype",
+                                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed.Type",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "declKind": "EnumElement",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO4elseyA2ImF",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO4elseyA2ImF",
+                        "moduleName": "GhostBenchmarkShared",
+                        "fixedbinaryorder": 1
+                      },
+                      {
+                        "kind": "Var",
+                        "name": "hashValue",
+                        "printedName": "hashValue",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "declKind": "Var",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO9hashValueSivp",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO9hashValueSivp",
+                        "moduleName": "GhostBenchmarkShared",
+                        "implicit": true,
+                        "accessors": [
+                          {
+                            "kind": "Accessor",
+                            "name": "Get",
+                            "printedName": "Get()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              }
+                            ],
+                            "declKind": "Accessor",
+                            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO9hashValueSivg",
+                            "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO9hashValueSivg",
+                            "moduleName": "GhostBenchmarkShared",
+                            "implicit": true,
+                            "accessorKind": "get"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "Function",
+                        "name": "hash",
+                        "printedName": "hash(into:)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Hasher",
+                            "printedName": "Swift.Hasher",
+                            "paramValueOwnership": "InOut",
+                            "usr": "s:s6HasherV"
+                          }
+                        ],
+                        "declKind": "Func",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO4hash4intoys6HasherVz_tF",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO4hash4intoys6HasherVz_tF",
+                        "moduleName": "GhostBenchmarkShared",
+                        "implicit": true,
+                        "funcSelfKind": "NonMutating"
+                      },
+                      {
+                        "kind": "Function",
+                        "name": "==",
+                        "printedName": "==(_:_:)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "__Sealed",
+                            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "__Sealed",
+                            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+                          }
+                        ],
+                        "declKind": "Func",
+                        "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO2eeoiySbAI_AItFZ",
+                        "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO2eeoiySbAI_AItFZ",
+                        "moduleName": "GhostBenchmarkShared",
+                        "static": true,
+                        "implicit": true,
+                        "funcSelfKind": "NonMutating"
+                      }
+                    ],
+                    "declKind": "Enum",
+                    "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO",
+                    "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO",
+                    "moduleName": "GhostBenchmarkShared",
+                    "declAttributes": [
+                      "AccessControl",
+                      "Frozen"
+                    ],
+                    "isFromExtension": true,
+                    "isEnumExhaustive": true,
+                    "conformances": [
+                      {
+                        "kind": "Conformance",
+                        "name": "Copyable",
+                        "printedName": "Copyable",
+                        "usr": "s:s8CopyableP",
+                        "mangledName": "$ss8CopyableP"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Escapable",
+                        "printedName": "Escapable",
+                        "usr": "s:s9EscapableP",
+                        "mangledName": "$ss9EscapableP"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Hashable",
+                        "printedName": "Hashable",
+                        "usr": "s:SH",
+                        "mangledName": "$sSH"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Equatable",
+                        "printedName": "Equatable",
+                        "usr": "s:SQ",
+                        "mangledName": "$sSQ"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Enum",
+                "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO",
+                "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO",
+                "moduleName": "GhostBenchmarkShared",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "conformances": [
+                  {
+                    "kind": "Conformance",
+                    "name": "Copyable",
+                    "printedName": "Copyable",
+                    "usr": "s:s8CopyableP",
+                    "mangledName": "$ss8CopyableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Escapable",
+                    "printedName": "Escapable",
+                    "usr": "s:s9EscapableP",
+                    "mangledName": "$ss9EscapableP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO",
+            "mangledName": "$s20GhostBenchmarkShared4SkieO4OkioO",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20GhostBenchmarkShared4SkieO",
+        "mangledName": "$s20GhostBenchmarkShared4SkieO",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "onEnum",
+        "printedName": "onEnum(of:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "__Sealed",
+            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "GenericTypeParam",
+            "printedName": "τ_0_0"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO12BufferedSinkO8__SealedOx_tSo07GBSOkioiJ0RzlF",
+        "mangledName": "$s20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO12BufferedSinkO8__SealedOx_tSo07GBSOkioiJ0RzlF",
+        "moduleName": "GhostBenchmarkShared",
+        "genericSig": "<τ_0_0 where τ_0_0 : GhostBenchmarkShared.OkioBufferedSink>",
+        "sugared_genericSig": "<__Sealed where __Sealed : GhostBenchmarkShared.OkioBufferedSink>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "onEnum",
+        "printedName": "onEnum(of:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "__Sealed",
+                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed",
+                "usr": "s:20GhostBenchmarkShared4SkieO4OkioO12BufferedSinkO8__SealedO"
+              }
+            ],
+            "usr": "s:Sq"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "τ_0_0?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "usr": "s:Sq"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO12BufferedSinkO8__SealedOSgxSg_tSo07GBSOkioiJ0RzlF",
+        "mangledName": "$s20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO12BufferedSinkO8__SealedOSgxSg_tSo07GBSOkioiJ0RzlF",
+        "moduleName": "GhostBenchmarkShared",
+        "genericSig": "<τ_0_0 where τ_0_0 : GhostBenchmarkShared.OkioBufferedSink>",
+        "sugared_genericSig": "<__Sealed where __Sealed : GhostBenchmarkShared.OkioBufferedSink>",
+        "declAttributes": [
+          "AccessControl",
+          "DisfavoredOverload"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "onEnum",
+        "printedName": "onEnum(of:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "__Sealed",
+            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+            "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "GenericTypeParam",
+            "printedName": "τ_0_0"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO14BufferedSourceO8__SealedOx_tSo07GBSOkioiJ0RzlF",
+        "mangledName": "$s20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO14BufferedSourceO8__SealedOx_tSo07GBSOkioiJ0RzlF",
+        "moduleName": "GhostBenchmarkShared",
+        "genericSig": "<τ_0_0 where τ_0_0 : GhostBenchmarkShared.OkioBufferedSource>",
+        "sugared_genericSig": "<__Sealed where __Sealed : GhostBenchmarkShared.OkioBufferedSource>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "onEnum",
+        "printedName": "onEnum(of:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "__Sealed",
+                "printedName": "GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed",
+                "usr": "s:20GhostBenchmarkShared4SkieO4OkioO14BufferedSourceO8__SealedO"
+              }
+            ],
+            "usr": "s:Sq"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "τ_0_0?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "usr": "s:Sq"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO14BufferedSourceO8__SealedOSgxSg_tSo07GBSOkioiJ0RzlF",
+        "mangledName": "$s20GhostBenchmarkShared6onEnum2ofAA4SkieO4OkioO14BufferedSourceO8__SealedOSgxSg_tSo07GBSOkioiJ0RzlF",
+        "moduleName": "GhostBenchmarkShared",
+        "genericSig": "<τ_0_0 where τ_0_0 : GhostBenchmarkShared.OkioBufferedSource>",
+        "sugared_genericSig": "<__Sealed where __Sealed : GhostBenchmarkShared.OkioBufferedSource>",
+        "declAttributes": [
+          "AccessControl",
+          "DisfavoredOverload"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "acquireCharBuffer",
+        "printedName": "acquireCharBuffer(minSize:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinCharArray",
+            "printedName": "GhostBenchmarkShared.KotlinCharArray",
+            "usr": "c:objc(cs)GBSKotlinCharArray"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int32",
+            "printedName": "Swift.Int32",
+            "usr": "s:s5Int32V"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared17acquireCharBuffer7minSizeSo09GBSKotlinE5ArrayCs5Int32V_tF",
+        "mangledName": "$s20GhostBenchmarkShared17acquireCharBuffer7minSizeSo09GBSKotlinE5ArrayCs5Int32V_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "acquireScratchBuffer",
+        "printedName": "acquireScratchBuffer(minSize:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinByteArray",
+            "printedName": "GhostBenchmarkShared.KotlinByteArray",
+            "usr": "c:objc(cs)GBSKotlinByteArray"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int32",
+            "printedName": "Swift.Int32",
+            "usr": "s:s5Int32V"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared20acquireScratchBuffer7minSizeSo18GBSKotlinByteArrayCs5Int32V_tF",
+        "mangledName": "$s20GhostBenchmarkShared20acquireScratchBuffer7minSizeSo18GBSKotlinByteArrayCs5Int32V_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "releaseCharBuffer",
+        "printedName": "releaseCharBuffer(buffer:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinCharArray",
+            "printedName": "GhostBenchmarkShared.KotlinCharArray",
+            "usr": "c:objc(cs)GBSKotlinCharArray"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared17releaseCharBuffer6bufferySo09GBSKotlinE5ArrayC_tF",
+        "mangledName": "$s20GhostBenchmarkShared17releaseCharBuffer6bufferySo09GBSKotlinE5ArrayC_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "releaseScratchBuffer",
+        "printedName": "releaseScratchBuffer(buffer:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinByteArray",
+            "printedName": "GhostBenchmarkShared.KotlinByteArray",
+            "usr": "c:objc(cs)GBSKotlinByteArray"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared20releaseScratchBuffer6bufferySo18GBSKotlinByteArrayC_tF",
+        "mangledName": "$s20GhostBenchmarkShared20releaseScratchBuffer6bufferySo18GBSKotlinByteArrayC_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "createAtomicMap",
+        "printedName": "createAtomicMap()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinMutableDictionary",
+            "printedName": "GhostBenchmarkShared.KotlinMutableDictionary<AnyObject, AnyObject>",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "AnyObject"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "AnyObject"
+              }
+            ],
+            "usr": "c:objc(cs)GBSMutableDictionary"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared15createAtomicMapSo20GBSMutableDictionaryCyyXlyXlGyF",
+        "mangledName": "$s20GhostBenchmarkShared15createAtomicMapSo20GBSMutableDictionaryCyyXlyXlGyF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "discoverRegistries",
+        "printedName": "discoverRegistries()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Array",
+            "printedName": "[any GhostBenchmarkShared.GhostRegistry]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GhostRegistry",
+                "printedName": "any GhostBenchmarkShared.GhostRegistry",
+                "usr": "c:objc(pl)GBSGhostRegistry"
+              }
+            ],
+            "usr": "s:Sa"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared18discoverRegistriesSaySo16GBSGhostRegistry_pGyF",
+        "mangledName": "$s20GhostBenchmarkShared18discoverRegistriesSaySo16GBSGhostRegistry_pGyF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "ghostInternalEncodeAndDiscard",
+        "printedName": "ghostInternalEncodeAndDiscard(block:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(GhostBenchmarkShared.GhostJsonFlatWriter) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GhostJsonFlatWriter",
+                "printedName": "GhostBenchmarkShared.GhostJsonFlatWriter",
+                "usr": "c:objc(cs)GBSGhostJsonFlatWriter"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared29ghostInternalEncodeAndDiscard5blockyySo22GBSGhostJsonFlatWriterCc_tF",
+        "mangledName": "$s20GhostBenchmarkShared29ghostInternalEncodeAndDiscard5blockyySo22GBSGhostJsonFlatWriterCc_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "ghostInternalEncodeAndDrainTo",
+        "printedName": "ghostInternalEncodeAndDrainTo(sink:block:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "OkioBufferedSink",
+            "printedName": "any GhostBenchmarkShared.OkioBufferedSink",
+            "usr": "c:objc(pl)GBSOkioBufferedSink"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(GhostBenchmarkShared.GhostJsonFlatWriter) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GhostJsonFlatWriter",
+                "printedName": "GhostBenchmarkShared.GhostJsonFlatWriter",
+                "usr": "c:objc(cs)GBSGhostJsonFlatWriter"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared29ghostInternalEncodeAndDrainTo4sink5blockySo19GBSOkioBufferedSink_p_ySo22GBSGhostJsonFlatWriterCctF",
+        "mangledName": "$s20GhostBenchmarkShared29ghostInternalEncodeAndDrainTo4sink5blockySo19GBSOkioBufferedSink_p_ySo22GBSGhostJsonFlatWriterCctF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "ghostInternalEncodeToString",
+        "printedName": "ghostInternalEncodeToString(block:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(GhostBenchmarkShared.GhostJsonFlatWriter) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GhostJsonFlatWriter",
+                "printedName": "GhostBenchmarkShared.GhostJsonFlatWriter",
+                "usr": "c:objc(cs)GBSGhostJsonFlatWriter"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared27ghostInternalEncodeToString5blockSSySo22GBSGhostJsonFlatWriterCc_tF",
+        "mangledName": "$s20GhostBenchmarkShared27ghostInternalEncodeToString5blockSSySo22GBSGhostJsonFlatWriterCc_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "ghostInternalEncodeWithWriter",
+        "printedName": "ghostInternalEncodeWithWriter(block:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinByteArray",
+            "printedName": "GhostBenchmarkShared.KotlinByteArray",
+            "usr": "c:objc(cs)GBSKotlinByteArray"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(GhostBenchmarkShared.GhostJsonFlatWriter) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GhostJsonFlatWriter",
+                "printedName": "GhostBenchmarkShared.GhostJsonFlatWriter",
+                "usr": "c:objc(cs)GBSGhostJsonFlatWriter"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared29ghostInternalEncodeWithWriter5blockSo18GBSKotlinByteArrayCySo016GBSGhostJsonFlatH0Cc_tF",
+        "mangledName": "$s20GhostBenchmarkShared29ghostInternalEncodeWithWriter5blockSo18GBSKotlinByteArrayCySo016GBSGhostJsonFlatH0Cc_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "ghostInternalUseReader",
+        "printedName": "ghostInternalUseReader(bytes:block:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "Any?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:Sq"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinByteArray",
+            "printedName": "GhostBenchmarkShared.KotlinByteArray",
+            "usr": "c:objc(cs)GBSKotlinByteArray"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(GhostBenchmarkShared.GhostJsonReader) -> Any?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GhostJsonReader",
+                "printedName": "GhostBenchmarkShared.GhostJsonReader",
+                "usr": "c:objc(cs)GBSGhostJsonReader"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared22ghostInternalUseReader5bytes5blockypSgSo18GBSKotlinByteArrayC_AESo012GBSGhostJsonG0CctF",
+        "mangledName": "$s20GhostBenchmarkShared22ghostInternalUseReader5bytes5blockypSgSo18GBSKotlinByteArrayC_AESo012GBSGhostJsonG0CctF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "ghostInternalUseSource",
+        "printedName": "ghostInternalUseSource(source:block:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "Any?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:Sq"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "OkioBufferedSource",
+            "printedName": "any GhostBenchmarkShared.OkioBufferedSource",
+            "usr": "c:objc(pl)GBSOkioBufferedSource"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(GhostBenchmarkShared.GhostJsonReader) -> Any?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GhostJsonReader",
+                "printedName": "GhostBenchmarkShared.GhostJsonReader",
+                "usr": "c:objc(cs)GBSGhostJsonReader"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared22ghostInternalUseSource6source5blockypSgSo015GBSOkioBufferedG0_p_AESo18GBSGhostJsonReaderCctF",
+        "mangledName": "$s20GhostBenchmarkShared22ghostInternalUseSource6source5blockypSgSo015GBSOkioBufferedG0_p_AESo18GBSGhostJsonReaderCctF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "runSynchronized",
+        "printedName": "runSynchronized(lock:block:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "Any?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:Sq"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "ProtocolComposition",
+            "printedName": "Any"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "() -> Any?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared15runSynchronized4lock5blockypSgyp_AEyctF",
+        "mangledName": "$s20GhostBenchmarkShared15runSynchronized4lock5blockypSgyp_AEyctF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "createByteArraySource",
+        "printedName": "createByteArraySource(data:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "GhostSource",
+            "printedName": "any GhostBenchmarkShared.GhostSource",
+            "usr": "c:objc(pl)GBSGhostSource"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "KotlinByteArray",
+            "printedName": "GhostBenchmarkShared.KotlinByteArray",
+            "usr": "c:objc(cs)GBSKotlinByteArray"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared21createByteArraySource4dataSo08GBSGhostG0_pSo09GBSKotlineF0C_tF",
+        "mangledName": "$s20GhostBenchmarkShared21createByteArraySource4dataSo08GBSGhostG0_pSo09GBSKotlineF0C_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "createSourceBridge",
+        "printedName": "createSourceBridge(source:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "GhostSource",
+            "printedName": "any GhostBenchmarkShared.GhostSource",
+            "usr": "c:objc(pl)GBSGhostSource"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "OkioBufferedSource",
+            "printedName": "any GhostBenchmarkShared.OkioBufferedSource",
+            "usr": "c:objc(pl)GBSOkioBufferedSource"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:20GhostBenchmarkShared18createSourceBridge6sourceSo08GBSGhostE0_pSo015GBSOkioBufferedE0_p_tF",
+        "mangledName": "$s20GhostBenchmarkShared18createSourceBridge6sourceSo08GBSGhostE0_pSo015GBSOkioBufferedE0_p_tF",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Var",
+        "name": "isJvm",
+        "printedName": "isJvm",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:20GhostBenchmarkShared5isJvmSbvp",
+        "mangledName": "$s20GhostBenchmarkShared5isJvmSbvp",
+        "moduleName": "GhostBenchmarkShared",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:20GhostBenchmarkShared5isJvmSbvg",
+            "mangledName": "$s20GhostBenchmarkShared5isJvmSbvg",
+            "moduleName": "GhostBenchmarkShared",
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "__KotlinKVariance",
+        "printedName": "__KotlinKVariance",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "toSwiftEnum",
+            "printedName": "toSwiftEnum()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KotlinKVariance",
+                "printedName": "GhostBenchmarkShared.KotlinKVariance",
+                "usr": "s:20GhostBenchmarkShared15KotlinKVarianceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So18GBSKotlinKVarianceC20GhostBenchmarkSharedE11toSwiftEnumAC06KotlinB0OyF",
+            "mangledName": "$sSo18GBSKotlinKVarianceC20GhostBenchmarkSharedE11toSwiftEnumAC06KotlinB0OyF",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)GBSKotlinKVariance",
+        "moduleName": "GhostBenchmarkShared",
+        "objc_name": "GBSKotlinKVariance",
+        "declAttributes": [
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)GBSKotlinEnum",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "GhostBenchmarkShared.KotlinEnum<GhostBenchmarkShared.__KotlinKVariance>",
+          "GhostBenchmarkShared.KotlinBase",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "__CharacterStatus",
+        "printedName": "__CharacterStatus",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "toSwiftEnum",
+            "printedName": "toSwiftEnum()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CharacterStatus",
+                "printedName": "GhostBenchmarkShared.CharacterStatus",
+                "usr": "s:20GhostBenchmarkShared15CharacterStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So18GBSCharacterStatusC20GhostBenchmarkSharedE11toSwiftEnumAC09CharacterB0OyF",
+            "mangledName": "$sSo18GBSCharacterStatusC20GhostBenchmarkSharedE11toSwiftEnumAC09CharacterB0OyF",
+            "moduleName": "GhostBenchmarkShared",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)GBSCharacterStatus",
+        "moduleName": "GhostBenchmarkShared",
+        "objc_name": "GBSCharacterStatus",
+        "declAttributes": [
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)GBSKotlinEnum",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "GhostBenchmarkShared.KotlinEnum<GhostBenchmarkShared.__CharacterStatus>",
+          "GhostBenchmarkShared.KotlinBase",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

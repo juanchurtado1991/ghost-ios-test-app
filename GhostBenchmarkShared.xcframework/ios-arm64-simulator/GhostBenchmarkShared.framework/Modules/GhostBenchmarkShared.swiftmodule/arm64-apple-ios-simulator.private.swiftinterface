@@ -1,0 +1,129 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name GhostBenchmarkShared
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import Foundation
+@_exported import GhostBenchmarkShared
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@frozen public enum KotlinKVariance : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
+  case invariant
+  case `in`
+  case out
+  public var name: Swift.String {
+    get
+  }
+  public var ordinal: Swift.Int32 {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: GhostBenchmarkShared.__KotlinKVariance, result: inout GhostBenchmarkShared.KotlinKVariance?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: GhostBenchmarkShared.__KotlinKVariance, result: inout GhostBenchmarkShared.KotlinKVariance?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: GhostBenchmarkShared.__KotlinKVariance?) -> GhostBenchmarkShared.KotlinKVariance
+  public func _bridgeToObjectiveC() -> GhostBenchmarkShared.__KotlinKVariance
+  public typealias _ObjectiveCType = GhostBenchmarkShared.__KotlinKVariance
+  public static func == (a: GhostBenchmarkShared.KotlinKVariance, b: GhostBenchmarkShared.KotlinKVariance) -> Swift.Bool
+  public typealias AllCases = [GhostBenchmarkShared.KotlinKVariance]
+  nonisolated public static var allCases: [GhostBenchmarkShared.KotlinKVariance] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension GhostBenchmarkShared.KotlinKVariance {
+  public func toKotlinEnum() -> GhostBenchmarkShared.__KotlinKVariance
+}
+extension GhostBenchmarkShared.__KotlinKVariance {
+  public func toSwiftEnum() -> GhostBenchmarkShared.KotlinKVariance
+}
+@frozen public enum CharacterStatus : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
+  case alive
+  case dead
+  case unknown
+  public var name: Swift.String {
+    get
+  }
+  public var ordinal: Swift.Int32 {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: GhostBenchmarkShared.__CharacterStatus, result: inout GhostBenchmarkShared.CharacterStatus?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: GhostBenchmarkShared.__CharacterStatus, result: inout GhostBenchmarkShared.CharacterStatus?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: GhostBenchmarkShared.__CharacterStatus?) -> GhostBenchmarkShared.CharacterStatus
+  public func _bridgeToObjectiveC() -> GhostBenchmarkShared.__CharacterStatus
+  public typealias _ObjectiveCType = GhostBenchmarkShared.__CharacterStatus
+  public static func == (a: GhostBenchmarkShared.CharacterStatus, b: GhostBenchmarkShared.CharacterStatus) -> Swift.Bool
+  public typealias AllCases = [GhostBenchmarkShared.CharacterStatus]
+  nonisolated public static var allCases: [GhostBenchmarkShared.CharacterStatus] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension GhostBenchmarkShared.CharacterStatus {
+  public func toKotlinEnum() -> GhostBenchmarkShared.__CharacterStatus
+}
+extension GhostBenchmarkShared.__CharacterStatus {
+  public func toSwiftEnum() -> GhostBenchmarkShared.CharacterStatus
+}
+public enum Skie {
+  public enum Okio {
+    public enum BufferedSink {
+    }
+    public enum BufferedSource {
+    }
+  }
+  public typealias com_squareup_okio__okio = GhostBenchmarkShared.Skie.Okio
+}
+extension GhostBenchmarkShared.Skie.Okio.BufferedSink {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case buffer(GhostBenchmarkShared.OkioBuffer)
+    case `else`
+    public static func == (a: GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed, b: GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed where __Sealed : GhostBenchmarkShared.OkioBufferedSink
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> GhostBenchmarkShared.Skie.Okio.BufferedSink.__Sealed? where __Sealed : GhostBenchmarkShared.OkioBufferedSink
+extension GhostBenchmarkShared.Skie.Okio.BufferedSource {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case buffer(GhostBenchmarkShared.OkioBuffer)
+    case `else`
+    public static func == (a: GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed, b: GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed where __Sealed : GhostBenchmarkShared.OkioBufferedSource
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> GhostBenchmarkShared.Skie.Okio.BufferedSource.__Sealed? where __Sealed : GhostBenchmarkShared.OkioBufferedSource
+public func acquireCharBuffer(minSize: Swift.Int32) -> GhostBenchmarkShared.KotlinCharArray
+public func acquireScratchBuffer(minSize: Swift.Int32) -> GhostBenchmarkShared.KotlinByteArray
+public func releaseCharBuffer(buffer: GhostBenchmarkShared.KotlinCharArray)
+public func releaseScratchBuffer(buffer: GhostBenchmarkShared.KotlinByteArray)
+public func createAtomicMap() -> GhostBenchmarkShared.KotlinMutableDictionary<Swift.AnyObject, Swift.AnyObject>
+public func discoverRegistries() -> [any GhostBenchmarkShared.GhostRegistry]
+public func ghostInternalEncodeAndDiscard(block: @escaping (GhostBenchmarkShared.GhostJsonFlatWriter) -> Swift.Void)
+public func ghostInternalEncodeAndDrainTo(sink: any GhostBenchmarkShared.OkioBufferedSink, block: @escaping (GhostBenchmarkShared.GhostJsonFlatWriter) -> Swift.Void)
+public func ghostInternalEncodeToString(block: @escaping (GhostBenchmarkShared.GhostJsonFlatWriter) -> Swift.Void) -> Swift.String
+public func ghostInternalEncodeWithWriter(block: @escaping (GhostBenchmarkShared.GhostJsonFlatWriter) -> Swift.Void) -> GhostBenchmarkShared.KotlinByteArray
+public func ghostInternalUseReader(bytes: GhostBenchmarkShared.KotlinByteArray, block: @escaping (GhostBenchmarkShared.GhostJsonReader) -> Any?) -> Any?
+public func ghostInternalUseSource(source: any GhostBenchmarkShared.OkioBufferedSource, block: @escaping (GhostBenchmarkShared.GhostJsonReader) -> Any?) -> Any?
+public func runSynchronized(lock: Any, block: @escaping () -> Any?) -> Any?
+public func createByteArraySource(data: GhostBenchmarkShared.KotlinByteArray) -> any GhostBenchmarkShared.GhostSource
+public func createSourceBridge(source: any GhostBenchmarkShared.OkioBufferedSource) -> any GhostBenchmarkShared.GhostSource
+public var isJvm: Swift.Bool {
+  get
+}
+extension GhostBenchmarkShared.KotlinKVariance : Swift.Sendable {}
+extension GhostBenchmarkShared.KotlinKVariance : Swift.BitwiseCopyable {}
+extension GhostBenchmarkShared.CharacterStatus : Swift.Sendable {}
+extension GhostBenchmarkShared.CharacterStatus : Swift.BitwiseCopyable {}

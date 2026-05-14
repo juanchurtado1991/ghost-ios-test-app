@@ -1,0 +1,27 @@
+# Xcode
+#
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.playground.xcworkspace
+!default.profraw
+
+# User settings
+#
+xcuserdata/
+
+# Swift Package Manager
+#
+.build/
+.swiftpm/
+
+# Ghost Serialization Binaries
+# XCFramework is intentionally committed so the repo is self-contained.
+# Rebuild with: ./gradlew :ghost-ios-benchmark:assembleGhostBenchmarkSharedReleaseXCFramework
+
+# Misc
+#
+.DS_Store
+*.swp
+*.lock

@@ -1,0 +1,4958 @@
+Name: "GhostBenchmarkShared"
+Classes:
+- Name: "GBSBase"
+  SwiftName: "KotlinBase"
+- Name: "GBSMutableSet"
+  SwiftName: "KotlinMutableSet"
+- Name: "GBSMutableDictionary"
+  SwiftName: "KotlinMutableDictionary"
+- Name: "GBSNumber"
+  SwiftName: "KotlinNumber"
+- Name: "GBSByte"
+  SwiftName: "KotlinByte"
+- Name: "GBSUByte"
+  SwiftName: "KotlinUByte"
+- Name: "GBSShort"
+  SwiftName: "KotlinShort"
+- Name: "GBSUShort"
+  SwiftName: "KotlinUShort"
+- Name: "GBSInt"
+  SwiftName: "KotlinInt"
+- Name: "GBSUInt"
+  SwiftName: "KotlinUInt"
+- Name: "GBSLong"
+  SwiftName: "KotlinLong"
+- Name: "GBSULong"
+  SwiftName: "KotlinULong"
+- Name: "GBSFloat"
+  SwiftName: "KotlinFloat"
+- Name: "GBSDouble"
+  SwiftName: "KotlinDouble"
+- Name: "GBSBoolean"
+  SwiftName: "KotlinBoolean"
+- Name: "GBSKotlinByteArray"
+  SwiftName: "KotlinByteArray"
+  Properties:
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "arrayWithSize:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "arrayWithSize:init:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:init:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSByte * _Nonnull (^ _Nonnull)(GBSInt * _Nonnull)"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "int8_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "iterator"
+    MethodKind: "Instance"
+    SwiftName: "iterator()"
+    ResultType: "GBSKotlinByteIterator * _Nonnull"
+  - Selector: "setIndex:value:"
+    MethodKind: "Instance"
+    SwiftName: "set(index:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int8_t"
+- Name: "GBSKotlinByteIterator"
+  SwiftName: "KotlinByteIterator"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "GBSByte * _Nonnull"
+  - Selector: "nextByte"
+    MethodKind: "Instance"
+    SwiftName: "nextByte()"
+    ResultType: "int8_t"
+- Name: "GBSKotlinThrowable"
+  SwiftName: "KotlinThrowable"
+  Properties:
+  - Name: "cause"
+    PropertyKind: "Instance"
+    SwiftName: "cause"
+    Type: "GBSKotlinThrowable * _Nullable"
+  - Name: "message"
+    PropertyKind: "Instance"
+    SwiftName: "message"
+    Type: "NSString * _Nullable"
+  Methods:
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinThrowable * _Nullable"
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "GBSKotlinThrowable * _Nullable"
+  - Selector: "getStackTrace"
+    MethodKind: "Instance"
+    SwiftName: "getStackTrace()"
+    ResultType: "GBSKotlinArray<NSString *> * _Nonnull"
+  - Selector: "printStackTrace"
+    MethodKind: "Instance"
+    SwiftName: "printStackTrace()"
+    ResultType: "void"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSKotlinArray"
+  SwiftName: "KotlinArray"
+  Properties:
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "arrayWithSize:init:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:init:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "T _Nullable (^ _Nonnull)(GBSInt * _Nonnull)"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "T _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "iterator"
+    MethodKind: "Instance"
+    SwiftName: "iterator()"
+    ResultType: "id<GBSKotlinIterator> _Nonnull"
+  - Selector: "setIndex:value:"
+    MethodKind: "Instance"
+    SwiftName: "set(index:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "T _Nullable"
+- Name: "GBSKotlinException"
+  SwiftName: "KotlinException"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "GBSKotlinThrowable * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinThrowable * _Nullable"
+- Name: "GBSKotlinIntArray"
+  SwiftName: "KotlinIntArray"
+  Properties:
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "arrayWithSize:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "arrayWithSize:init:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:init:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSInt * _Nonnull (^ _Nonnull)(GBSInt * _Nonnull)"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "iterator"
+    MethodKind: "Instance"
+    SwiftName: "iterator()"
+    ResultType: "GBSKotlinIntIterator * _Nonnull"
+  - Selector: "setIndex:value:"
+    MethodKind: "Instance"
+    SwiftName: "set(index:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+- Name: "GBSKotlinIntIterator"
+  SwiftName: "KotlinIntIterator"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "GBSInt * _Nonnull"
+  - Selector: "nextInt"
+    MethodKind: "Instance"
+    SwiftName: "nextInt()"
+    ResultType: "int32_t"
+- Name: "GBSKotlinKTypeProjection"
+  SwiftName: "KotlinKTypeProjection"
+  Properties:
+  - Name: "type"
+    PropertyKind: "Instance"
+    SwiftName: "type"
+    Type: "id<GBSKotlinKType> _Nullable"
+  - Name: "variance"
+    PropertyKind: "Instance"
+    SwiftName: "variance"
+    Type: "GBSKotlinKVariance * _Nullable"
+  Methods:
+  - Selector: "initWithVariance:type:"
+    MethodKind: "Instance"
+    SwiftName: "init(variance:type:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinKVariance * _Nullable"
+    - Position: 1
+      Type: "id<GBSKotlinKType> _Nullable"
+  - Selector: "doCopyVariance:type:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(variance:type:)"
+    ResultType: "GBSKotlinKTypeProjection * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinKVariance * _Nullable"
+    - Position: 1
+      Type: "id<GBSKotlinKType> _Nullable"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSKotlinKTypeProjectionCompanion"
+  SwiftName: "KotlinKTypeProjection.Companion"
+  Properties:
+  - Name: "STAR"
+    PropertyKind: "Instance"
+    SwiftName: "STAR"
+    Type: "GBSKotlinKTypeProjection * _Nonnull"
+  Methods:
+  - Selector: "contravariantType:"
+    MethodKind: "Instance"
+    SwiftName: "contravariant(type:)"
+    ResultType: "GBSKotlinKTypeProjection * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSKotlinKType> _Nonnull"
+  - Selector: "covariantType:"
+    MethodKind: "Instance"
+    SwiftName: "covariant(type:)"
+    ResultType: "GBSKotlinKTypeProjection * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSKotlinKType> _Nonnull"
+  - Selector: "invariantType:"
+    MethodKind: "Instance"
+    SwiftName: "invariant(type:)"
+    ResultType: "GBSKotlinKTypeProjection * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSKotlinKType> _Nonnull"
+- Name: "GBSKotlinKVariance"
+  SwiftBridge: "KotlinKVariance"
+  SwiftName: "__KotlinKVariance"
+  SwiftPrivate: true
+  Properties:
+  - Name: "invariant"
+    PropertyKind: "Class"
+    SwiftName: "invariant"
+    Type: "GBSKotlinKVariance * _Nonnull"
+  - Name: "in"
+    PropertyKind: "Class"
+    SwiftName: "in"
+    Type: "GBSKotlinKVariance * _Nonnull"
+  - Name: "out"
+    PropertyKind: "Class"
+    SwiftName: "out"
+    Type: "GBSKotlinKVariance * _Nonnull"
+  Methods:
+  - Selector: "initWithName:ordinal:"
+    MethodKind: "Instance"
+    SwiftName: "init(name:ordinal:)"
+    Availability: "nonswift"
+- Name: "GBSKotlinEnum"
+  SwiftName: "KotlinEnum"
+  Properties:
+  - Name: "name"
+    PropertyKind: "Instance"
+    SwiftName: "name"
+    Type: "NSString * _Nonnull"
+  - Name: "ordinal"
+    PropertyKind: "Instance"
+    SwiftName: "ordinal"
+    Type: "int32_t"
+  Methods:
+  - Selector: "initWithName:ordinal:"
+    MethodKind: "Instance"
+    SwiftName: "init(name:ordinal:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "compareToOther:"
+    MethodKind: "Instance"
+    SwiftName: "compareTo(other:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "E _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSKotlinEnumCompanion"
+  SwiftName: "KotlinEnumCompanion"
+- Name: "GBSKotlinCharArray"
+  SwiftName: "KotlinCharArray"
+  Properties:
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "arrayWithSize:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "arrayWithSize:init:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:init:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "id _Nonnull (^ _Nonnull)(GBSInt * _Nonnull)"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "unichar"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "iterator"
+    MethodKind: "Instance"
+    SwiftName: "iterator()"
+    ResultType: "GBSKotlinCharIterator * _Nonnull"
+  - Selector: "setIndex:value:"
+    MethodKind: "Instance"
+    SwiftName: "set(index:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "unichar"
+- Name: "GBSKotlinCharIterator"
+  SwiftName: "KotlinCharIterator"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "id _Nonnull"
+  - Selector: "nextChar"
+    MethodKind: "Instance"
+    SwiftName: "nextChar()"
+    ResultType: "unichar"
+- Name: "GBSKotlinRuntimeException"
+  SwiftName: "KotlinRuntimeException"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "GBSKotlinThrowable * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinThrowable * _Nullable"
+- Name: "GBSKotlinLongArray"
+  SwiftName: "KotlinLongArray"
+  Properties:
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "arrayWithSize:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "arrayWithSize:init:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:init:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSLong * _Nonnull (^ _Nonnull)(GBSInt * _Nonnull)"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "iterator"
+    MethodKind: "Instance"
+    SwiftName: "iterator()"
+    ResultType: "GBSKotlinLongIterator * _Nonnull"
+  - Selector: "setIndex:value:"
+    MethodKind: "Instance"
+    SwiftName: "set(index:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int64_t"
+- Name: "GBSKotlinLongIterator"
+  SwiftName: "KotlinLongIterator"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "GBSLong * _Nonnull"
+  - Selector: "nextLong"
+    MethodKind: "Instance"
+    SwiftName: "nextLong()"
+    ResultType: "int64_t"
+- Name: "GBSGhost"
+  SwiftName: "Ghost"
+  Properties:
+  - Name: "MISSING_ANN"
+    PropertyKind: "Instance"
+    SwiftName: "MISSING_ANN"
+    Type: "NSString * _Nonnull"
+  - Name: "NOT_FOUND"
+    PropertyKind: "Instance"
+    SwiftName: "NOT_FOUND"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "addRegistryRegistry:"
+    MethodKind: "Instance"
+    SwiftName: "addRegistry(registry:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSGhostRegistry> _Nonnull"
+  - Selector: "decodeFromBytesBytes:clazz:"
+    MethodKind: "Instance"
+    SwiftName: "decodeFromBytes(bytes:clazz:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "id<GBSKotlinKClass> _Nonnull"
+  - Selector: "decodeFromSourceSource:clazz:"
+    MethodKind: "Instance"
+    SwiftName: "decodeFromSource(source:clazz:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+    - Position: 1
+      Type: "id<GBSKotlinKClass> _Nonnull"
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "deserializeBytes:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(bytes:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "deserializeBytes:options:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(bytes:options:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(GBSGhostJsonReader * _Nonnull)"
+  - Selector: "deserializeJson:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(json:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "deserializeJson:options:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(json:options:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(GBSGhostJsonReader * _Nonnull)"
+  - Selector: "deserializeSource:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(source:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+  - Selector: "deserializeSource:options:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(source:options:)"
+    ResultType: "id _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(GBSGhostJsonReader * _Nonnull)"
+  - Selector: "encodeAndDiscardValue:"
+    MethodKind: "Instance"
+    SwiftName: "encodeAndDiscard(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id _Nonnull"
+  - Selector: "encodeToBytesValue:"
+    MethodKind: "Instance"
+    SwiftName: "encodeToBytes(value:)"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id _Nonnull"
+  - Selector: "encodeToSinkSink:value:"
+    MethodKind: "Instance"
+    SwiftName: "encodeToSink(sink:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSink> _Nonnull"
+    - Position: 1
+      Type: "id _Nonnull"
+  - Selector: "encodeToSinkSink:value:clazz:"
+    MethodKind: "Instance"
+    SwiftName: "encodeToSink(sink:value:clazz:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSink> _Nonnull"
+    - Position: 1
+      Type: "id _Nonnull"
+    - Position: 2
+      Type: "id<GBSKotlinKClass> _Nonnull"
+  - Selector: "encodeToStringValue:"
+    MethodKind: "Instance"
+    SwiftName: "encodeToString(value:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id _Nonnull"
+  - Selector: "getSerializerClazz:"
+    MethodKind: "Instance"
+    SwiftName: "getSerializer(clazz:)"
+    ResultType: "id<GBSGhostSerializer> _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSKotlinKClass> _Nonnull"
+  - Selector: "getSerializerType:"
+    MethodKind: "Instance"
+    SwiftName: "getSerializer(type:)"
+    ResultType: "id<GBSGhostSerializer> _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSKotlinKType> _Nonnull"
+  - Selector: "getSerializerByNameName:"
+    MethodKind: "Instance"
+    SwiftName: "getSerializerByName(name:)"
+    ResultType: "id<GBSGhostSerializer> _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "getSerializerNames"
+    MethodKind: "Instance"
+    SwiftName: "getSerializerNames()"
+    ResultType: "NSArray<NSString *> * _Nonnull"
+  - Selector: "prewarm"
+    MethodKind: "Instance"
+    SwiftName: "prewarm()"
+    ResultType: "void"
+  - Selector: "resetForTest"
+    MethodKind: "Instance"
+    SwiftName: "resetForTest()"
+    ResultType: "void"
+  - Selector: "serializeValue:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(value:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id _Nonnull"
+  - Selector: "serializeSink:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(sink:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSink> _Nonnull"
+    - Position: 1
+      Type: "id _Nonnull"
+  - Selector: "throwErrorMessage:"
+    MethodKind: "Instance"
+    SwiftName: "throwError(message:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+- Name: "GBSGhostJsonWriter"
+  SwiftName: "GhostJsonWriter"
+  Methods:
+  - Selector: "initWithSink:"
+    MethodKind: "Instance"
+    SwiftName: "init(sink:)"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSink> _Nonnull"
+  - Selector: "beginArray"
+    MethodKind: "Instance"
+    SwiftName: "beginArray()"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+  - Selector: "beginObject"
+    MethodKind: "Instance"
+    SwiftName: "beginObject()"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+  - Selector: "endArray"
+    MethodKind: "Instance"
+    SwiftName: "endArray()"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+  - Selector: "endObject"
+    MethodKind: "Instance"
+    SwiftName: "endObject()"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+  - Selector: "flush"
+    MethodKind: "Instance"
+    SwiftName: "flush()"
+    ResultType: "void"
+  - Selector: "nameKey:"
+    MethodKind: "Instance"
+    SwiftName: "name(key:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "nameKey_:"
+    MethodKind: "Instance"
+    SwiftName: "name(key:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "nullValue"
+    MethodKind: "Instance"
+    SwiftName: "nullValue()"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+  - Selector: "release_"
+    MethodKind: "Instance"
+    SwiftName: "release()"
+    ResultType: "void"
+  - Selector: "reset"
+    MethodKind: "Instance"
+    SwiftName: "reset()"
+    ResultType: "void"
+  - Selector: "valueValue:"
+    MethodKind: "Instance"
+    SwiftName: "value(value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "BOOL"
+  - Selector: "valueNumber:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "double"
+  - Selector: "valueNumber_:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "float"
+  - Selector: "valueNumber__:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "valueNumber___:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "valueText:"
+    MethodKind: "Instance"
+    SwiftName: "value(text:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "writeBooleanValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeBooleanValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "BOOL"
+  - Selector: "writeDoubleValueRawNumber:"
+    MethodKind: "Instance"
+    SwiftName: "writeDoubleValueRaw(number:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "double"
+  - Selector: "writeFieldIndex:options:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "BOOL"
+  - Selector: "writeFieldIndex:options:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "double"
+  - Selector: "writeFieldIndex:options:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "float"
+  - Selector: "writeFieldIndex:options:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeFieldIndex:options:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int64_t"
+  - Selector: "writeFieldIndex:options:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFieldHeader:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "BOOL"
+  - Selector: "writeFieldHeader:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "double"
+  - Selector: "writeFieldHeader:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "float"
+  - Selector: "writeFieldHeader:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "writeFieldHeader:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeFieldHeader:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFieldWithCommaHeader:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "BOOL"
+  - Selector: "writeFieldWithCommaHeader:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "double"
+  - Selector: "writeFieldWithCommaHeader:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "float"
+  - Selector: "writeFieldWithCommaHeader:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "writeFieldWithCommaHeader:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeFieldWithCommaHeader:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFirstFieldIndex:options:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeFirstFieldIndex:options:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int64_t"
+  - Selector: "writeFirstFieldIndex:options:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(index:options:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFirstFieldHeader:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "BOOL"
+  - Selector: "writeFirstFieldHeader:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "double"
+  - Selector: "writeFirstFieldHeader:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "float"
+  - Selector: "writeFirstFieldHeader:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "writeFirstFieldHeader:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeFirstFieldHeader:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "writeIntValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeIntValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeLongValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeLongValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeNameRawHeader:"
+    MethodKind: "Instance"
+    SwiftName: "writeNameRaw(header:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "writeNameRawWithCommaHeader:"
+    MethodKind: "Instance"
+    SwiftName: "writeNameRawWithComma(header:)"
+    ResultType: "GBSGhostJsonWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "writeNullValueRaw"
+    MethodKind: "Instance"
+    SwiftName: "writeNullValueRaw()"
+    ResultType: "void"
+  - Selector: "writeRawBytes:"
+    MethodKind: "Instance"
+    SwiftName: "writeRaw(bytes:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "writeRawByte:"
+    MethodKind: "Instance"
+    SwiftName: "writeRaw(byte:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeStringValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeStringValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+- Name: "GBSJsonReaderOptions"
+  SwiftName: "JsonReaderOptions"
+  Properties:
+  - Name: "writerFirstHeaders"
+    PropertyKind: "Instance"
+    SwiftName: "writerFirstHeaders"
+    Type: "GBSKotlinArray<GBSOkioByteString *> * _Nonnull"
+  - Name: "writerHeaders"
+    PropertyKind: "Instance"
+    SwiftName: "writerHeaders"
+    Type: "GBSKotlinArray<GBSOkioByteString *> * _Nonnull"
+  - Name: "writerHeadersWithComma"
+    PropertyKind: "Instance"
+    SwiftName: "writerHeadersWithComma"
+    Type: "GBSKotlinArray<GBSOkioByteString *> * _Nonnull"
+  Methods:
+  - Selector: "initWithRawBytes:writerHeaders:writerHeadersWithComma:writerFirstHeaders:rawInts:shift:multiplier:"
+    MethodKind: "Instance"
+    SwiftName: "init(rawBytes:writerHeaders:writerHeadersWithComma:writerFirstHeaders:rawInts:shift:multiplier:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinArray<GBSOkioByteString *> * _Nonnull"
+    - Position: 1
+      Type: "GBSKotlinArray<GBSOkioByteString *> * _Nonnull"
+    - Position: 2
+      Type: "GBSKotlinArray<GBSOkioByteString *> * _Nonnull"
+    - Position: 3
+      Type: "GBSKotlinArray<GBSOkioByteString *> * _Nonnull"
+    - Position: 4
+      Type: "GBSKotlinArray<GBSKotlinIntArray *> * _Nonnull"
+    - Position: 5
+      Type: "int32_t"
+    - Position: 6
+      Type: "int32_t"
+- Name: "GBSJsonReaderOptionsCompanion"
+  SwiftName: "JsonReaderOptions.Companion"
+  Methods:
+  - Selector: "ofNames:"
+    MethodKind: "Instance"
+    SwiftName: "of(names:)"
+    ResultType: "GBSJsonReaderOptions * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinArray<NSString *> * _Nonnull"
+  - Selector: "ofShift:multiplier:names:"
+    MethodKind: "Instance"
+    SwiftName: "of(shift:multiplier:names:)"
+    ResultType: "GBSJsonReaderOptions * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "GBSKotlinArray<NSString *> * _Nonnull"
+- Name: "GBSGhostJsonFlatWriter"
+  SwiftName: "GhostJsonFlatWriter"
+  Methods:
+  - Selector: "beginArray"
+    MethodKind: "Instance"
+    SwiftName: "beginArray()"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+  - Selector: "beginObject"
+    MethodKind: "Instance"
+    SwiftName: "beginObject()"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+  - Selector: "endArray"
+    MethodKind: "Instance"
+    SwiftName: "endArray()"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+  - Selector: "endObject"
+    MethodKind: "Instance"
+    SwiftName: "endObject()"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+  - Selector: "flush"
+    MethodKind: "Instance"
+    SwiftName: "flush()"
+    ResultType: "void"
+  - Selector: "nameKey:"
+    MethodKind: "Instance"
+    SwiftName: "name(key:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "nameKey_:"
+    MethodKind: "Instance"
+    SwiftName: "name(key:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "nullValue"
+    MethodKind: "Instance"
+    SwiftName: "nullValue()"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+  - Selector: "release_"
+    MethodKind: "Instance"
+    SwiftName: "release()"
+    ResultType: "void"
+  - Selector: "reset"
+    MethodKind: "Instance"
+    SwiftName: "reset()"
+    ResultType: "void"
+  - Selector: "valueValue:"
+    MethodKind: "Instance"
+    SwiftName: "value(value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "BOOL"
+  - Selector: "valueNumber:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "double"
+  - Selector: "valueNumber_:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "float"
+  - Selector: "valueNumber__:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "valueNumber___:"
+    MethodKind: "Instance"
+    SwiftName: "value(number:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "valueText:"
+    MethodKind: "Instance"
+    SwiftName: "value(text:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "writeBooleanValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeBooleanValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "BOOL"
+  - Selector: "writeDoubleValueRawNumber:"
+    MethodKind: "Instance"
+    SwiftName: "writeDoubleValueRaw(number:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "double"
+  - Selector: "writeFieldIndex:options:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "BOOL"
+  - Selector: "writeFieldIndex:options:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "double"
+  - Selector: "writeFieldIndex:options:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "float"
+  - Selector: "writeFieldIndex:options:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeFieldIndex:options:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int64_t"
+  - Selector: "writeFieldIndex:options:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFieldHeader:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "BOOL"
+  - Selector: "writeFieldHeader:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "double"
+  - Selector: "writeFieldHeader:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "float"
+  - Selector: "writeFieldHeader:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "writeFieldHeader:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeFieldHeader:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFieldWithCommaHeader:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "BOOL"
+  - Selector: "writeFieldWithCommaHeader:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "double"
+  - Selector: "writeFieldWithCommaHeader:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "float"
+  - Selector: "writeFieldWithCommaHeader:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "writeFieldWithCommaHeader:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeFieldWithCommaHeader:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFieldWithComma(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFirstFieldIndex:options:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeFirstFieldIndex:options:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "int64_t"
+  - Selector: "writeFirstFieldIndex:options:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(index:options:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSJsonReaderOptions * _Nonnull"
+    - Position: 2
+      Type: "NSString * _Nonnull"
+  - Selector: "writeFirstFieldHeader:value:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "BOOL"
+  - Selector: "writeFirstFieldHeader:value_:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "double"
+  - Selector: "writeFirstFieldHeader:value__:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "float"
+  - Selector: "writeFirstFieldHeader:value___:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "writeFirstFieldHeader:value____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeFirstFieldHeader:value_____:"
+    MethodKind: "Instance"
+    SwiftName: "writeFirstField(header:value:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "writeIntValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeIntValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeLongValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeLongValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeNameRawHeader:"
+    MethodKind: "Instance"
+    SwiftName: "writeNameRaw(header:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "writeNameRawWithCommaHeader:"
+    MethodKind: "Instance"
+    SwiftName: "writeNameRawWithComma(header:)"
+    ResultType: "GBSGhostJsonFlatWriter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "writeNullValueRaw"
+    MethodKind: "Instance"
+    SwiftName: "writeNullValueRaw()"
+    ResultType: "void"
+  - Selector: "writeRawBytes:"
+    MethodKind: "Instance"
+    SwiftName: "writeRaw(bytes:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "writeRawByte:"
+    MethodKind: "Instance"
+    SwiftName: "writeRaw(byte:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeStringValueRawValue:"
+    MethodKind: "Instance"
+    SwiftName: "writeStringValueRaw(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+- Name: "GBSGhostJsonReader"
+  SwiftName: "GhostJsonReader"
+  Properties:
+  - Name: "coerceStringsToNumbers"
+    PropertyKind: "Instance"
+    SwiftName: "coerceStringsToNumbers"
+    Type: "BOOL"
+  - Name: "depth"
+    PropertyKind: "Instance"
+    SwiftName: "depth"
+    Type: "int32_t"
+  - Name: "maxCollectionSize"
+    PropertyKind: "Instance"
+    SwiftName: "maxCollectionSize"
+    Type: "int32_t"
+  - Name: "maxDepth"
+    PropertyKind: "Instance"
+    SwiftName: "maxDepth"
+    Type: "int32_t"
+  - Name: "strictMode"
+    PropertyKind: "Instance"
+    SwiftName: "strictMode"
+    Type: "BOOL"
+  Methods:
+  - Selector: "initWithBytes:maxDepth:strictMode:coerceStringsToNumbers:maxCollectionSize:"
+    MethodKind: "Instance"
+    SwiftName: "init(bytes:maxDepth:strictMode:coerceStringsToNumbers:maxCollectionSize:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "BOOL"
+    - Position: 3
+      Type: "BOOL"
+    - Position: 4
+      Type: "int32_t"
+  - Selector: "initWithOkioSource:maxDepth:strictMode:coerceStringsToNumbers:maxCollectionSize:"
+    MethodKind: "Instance"
+    SwiftName: "init(okioSource:maxDepth:strictMode:coerceStringsToNumbers:maxCollectionSize:)"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "BOOL"
+    - Position: 3
+      Type: "BOOL"
+    - Position: 4
+      Type: "int32_t"
+  - Selector: "initWithSource:limit:maxDepth:strictMode:coerceStringsToNumbers:maxCollectionSize:"
+    MethodKind: "Instance"
+    SwiftName: "init(source:limit:maxDepth:strictMode:coerceStringsToNumbers:maxCollectionSize:)"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSGhostSource> _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "BOOL"
+    - Position: 4
+      Type: "BOOL"
+    - Position: 5
+      Type: "int32_t"
+  - Selector: "expectByteExpected:"
+    MethodKind: "Instance"
+    SwiftName: "expectByte(expected:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "internalSkipN:"
+    MethodKind: "Instance"
+    SwiftName: "internalSkip(n:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "nextNonWhitespace"
+    MethodKind: "Instance"
+    SwiftName: "nextNonWhitespace()"
+    ResultType: "int32_t"
+  - Selector: "nextToken"
+    MethodKind: "Instance"
+    SwiftName: "nextToken()"
+    ResultType: "int32_t"
+  - Selector: "peekByte"
+    MethodKind: "Instance"
+    SwiftName: "peekByte()"
+    ResultType: "int8_t"
+  - Selector: "peekDiscriminatorKey:"
+    MethodKind: "Instance"
+    SwiftName: "peekDiscriminator(key:)"
+    ResultType: "NSString * _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "peekDiscriminatorKey_:"
+    MethodKind: "Instance"
+    SwiftName: "peekDiscriminator(key:)"
+    ResultType: "NSString * _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "peekNextToken"
+    MethodKind: "Instance"
+    SwiftName: "peekNextToken()"
+    ResultType: "int32_t"
+  - Selector: "readQuotedString"
+    MethodKind: "Instance"
+    SwiftName: "readQuotedString()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "resetNewSource:newLimit:"
+    MethodKind: "Instance"
+    SwiftName: "reset(newSource:newLimit:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSGhostSource> _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "resetNewData:newLimit:"
+    MethodKind: "Instance"
+    SwiftName: "reset(newData:newLimit:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "resetOkioSource:"
+    MethodKind: "Instance"
+    SwiftName: "reset(okioSource:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+  - Selector: "skipAndValidateLiteralExpected:"
+    MethodKind: "Instance"
+    SwiftName: "skipAndValidateLiteral(expected:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "skipAndValidateLiteralExpected_:"
+    MethodKind: "Instance"
+    SwiftName: "skipAndValidateLiteral(expected:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "skipQuotedString"
+    MethodKind: "Instance"
+    SwiftName: "skipQuotedString()"
+    ResultType: "void"
+  - Selector: "skipWhitespace"
+    MethodKind: "Instance"
+    SwiftName: "skipWhitespace()"
+    ResultType: "void"
+  - Selector: "throwErrorMessage:"
+    MethodKind: "Instance"
+    SwiftName: "throwError(message:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "beginArray"
+    MethodKind: "Instance"
+    SwiftName: "beginArray()"
+    ResultType: "void"
+  - Selector: "beginObject"
+    MethodKind: "Instance"
+    SwiftName: "beginObject()"
+    ResultType: "void"
+  - Selector: "checkCollectionSizeSize:"
+    MethodKind: "Instance"
+    SwiftName: "checkCollectionSize(size:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "consumeArraySeparator"
+    MethodKind: "Instance"
+    SwiftName: "consumeArraySeparator()"
+    ResultType: "void"
+  - Selector: "consumeKeySeparator"
+    MethodKind: "Instance"
+    SwiftName: "consumeKeySeparator()"
+    ResultType: "void"
+  - Selector: "consumeNull"
+    MethodKind: "Instance"
+    SwiftName: "consumeNull()"
+    ResultType: "void"
+  - Selector: "endArray"
+    MethodKind: "Instance"
+    SwiftName: "endArray()"
+    ResultType: "void"
+  - Selector: "endObject"
+    MethodKind: "Instance"
+    SwiftName: "endObject()"
+    ResultType: "void"
+  - Selector: "hasNext"
+    MethodKind: "Instance"
+    SwiftName: "hasNext()"
+    ResultType: "BOOL"
+  - Selector: "isNextNullValue"
+    MethodKind: "Instance"
+    SwiftName: "isNextNullValue()"
+    ResultType: "BOOL"
+  - Selector: "nextBoolean"
+    MethodKind: "Instance"
+    SwiftName: "nextBoolean()"
+    ResultType: "BOOL"
+  - Selector: "nextDouble"
+    MethodKind: "Instance"
+    SwiftName: "nextDouble()"
+    ResultType: "double"
+  - Selector: "nextFloat"
+    MethodKind: "Instance"
+    SwiftName: "nextFloat()"
+    ResultType: "float"
+  - Selector: "nextInt"
+    MethodKind: "Instance"
+    SwiftName: "nextInt()"
+    ResultType: "int32_t"
+  - Selector: "nextKey"
+    MethodKind: "Instance"
+    SwiftName: "nextKey()"
+    ResultType: "NSString * _Nullable"
+  - Selector: "nextLong"
+    MethodKind: "Instance"
+    SwiftName: "nextLong()"
+    ResultType: "int64_t"
+  - Selector: "nextString"
+    MethodKind: "Instance"
+    SwiftName: "nextString()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "peekStringFieldName:"
+    MethodKind: "Instance"
+    SwiftName: "peekStringField(name:)"
+    ResultType: "NSString * _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "readListItemParser:"
+    MethodKind: "Instance"
+    SwiftName: "readList(itemParser:)"
+    ResultType: "NSArray<id> * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable (^ _Nonnull)(void)"
+  - Selector: "readMapKeyParser:valueParser:"
+    MethodKind: "Instance"
+    SwiftName: "readMap(keyParser:valueParser:)"
+    ResultType: "NSDictionary<id, id> * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable (^ _Nonnull)(void)"
+    - Position: 1
+      Type: "id _Nullable (^ _Nonnull)(void)"
+  - Selector: "selectNameAndConsumeOptions:"
+    MethodKind: "Instance"
+    SwiftName: "selectNameAndConsume(options:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSJsonReaderOptions * _Nonnull"
+  - Selector: "selectStringOptions:"
+    MethodKind: "Instance"
+    SwiftName: "selectString(options:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSJsonReaderOptions * _Nonnull"
+  - Selector: "skipNumber"
+    MethodKind: "Instance"
+    SwiftName: "skipNumber()"
+    ResultType: "void"
+  - Selector: "skipValue"
+    MethodKind: "Instance"
+    SwiftName: "skipValue()"
+    ResultType: "void"
+- Name: "GBSGhostDiscriminatorPeeker"
+  SwiftName: "GhostDiscriminatorPeeker"
+  Methods:
+  - Selector: "peekSource:rawData:isStreaming:start:limit:key:"
+    MethodKind: "Instance"
+    SwiftName: "peek(source:rawData:isStreaming:start:limit:key:)"
+    ResultType: "NSString * _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSGhostSource> _Nonnull"
+    - Position: 1
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 2
+      Type: "BOOL"
+    - Position: 3
+      Type: "int32_t"
+    - Position: 4
+      Type: "int32_t"
+    - Position: 5
+      Type: "GBSOkioByteString * _Nonnull"
+- Name: "GBSGhostHeuristics"
+  SwiftName: "GhostHeuristics"
+  Properties:
+  - Name: "initialCollectionCapacity"
+    PropertyKind: "Instance"
+    SwiftName: "initialCollectionCapacity"
+    Type: "int32_t"
+  - Name: "maxCollectionSize"
+    PropertyKind: "Instance"
+    SwiftName: "maxCollectionSize"
+    Type: "int32_t"
+  - Name: "maxDiscriminatorPeekDistance"
+    PropertyKind: "Instance"
+    SwiftName: "maxDiscriminatorPeekDistance"
+    Type: "int32_t"
+  - Name: "maxStringPoolLength"
+    PropertyKind: "Instance"
+    SwiftName: "maxStringPoolLength"
+    Type: "int32_t"
+- Name: "GBSIosByteArraySource"
+  SwiftName: "IosByteArraySource"
+  Properties:
+  - Name: "data"
+    PropertyKind: "Instance"
+    SwiftName: "data"
+    Type: "GBSKotlinByteArray * _Nonnull"
+  - Name: "rawSourceData"
+    PropertyKind: "Instance"
+    SwiftName: "rawSourceData"
+    Type: "GBSKotlinByteArray * _Nonnull"
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "initWithData:"
+    MethodKind: "Instance"
+    SwiftName: "init(data:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "calculateHashStart:length:"
+    MethodKind: "Instance"
+    SwiftName: "calculateHash(start:length:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "contentEqualsStart:expected:"
+    MethodKind: "Instance"
+    SwiftName: "contentEquals(start:expected:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "contentEqualsStringStart:length:str:"
+    MethodKind: "Instance"
+    SwiftName: "contentEqualsString(start:length:str:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "NSString * _Nonnull"
+  - Selector: "doCopyToSink:sinkOffset:start:count:"
+    MethodKind: "Instance"
+    SwiftName: "doCopyTo(sink:sinkOffset:start:count:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "decodeToStringStart:end:"
+    MethodKind: "Instance"
+    SwiftName: "decodeToString(start:end:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "findClosingQuotePosition:limit:"
+    MethodKind: "Instance"
+    SwiftName: "findClosingQuote(position:limit:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "findNextNonWhitespacePosition:limit:"
+    MethodKind: "Instance"
+    SwiftName: "findNextNonWhitespace(position:limit:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "scanStringStart:limit:reader:"
+    MethodKind: "Instance"
+    SwiftName: "scanString(start:limit:reader:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "GBSGhostJsonReader * _Nonnull"
+- Name: "GBSStreamingGhostSource"
+  SwiftName: "StreamingGhostSource"
+  Properties:
+  - Name: "okioSource"
+    PropertyKind: "Instance"
+    SwiftName: "okioSource"
+    Type: "id<GBSOkioBufferedSource> _Nonnull"
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "initWithOkioSource:"
+    MethodKind: "Instance"
+    SwiftName: "init(okioSource:)"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+  - Selector: "calculateHashStart:length:"
+    MethodKind: "Instance"
+    SwiftName: "calculateHash(start:length:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "contentEqualsStart:expected:"
+    MethodKind: "Instance"
+    SwiftName: "contentEquals(start:expected:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "contentEqualsStringStart:length:str:"
+    MethodKind: "Instance"
+    SwiftName: "contentEqualsString(start:length:str:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "NSString * _Nonnull"
+  - Selector: "doCopyToSink:sinkOffset:start:count:"
+    MethodKind: "Instance"
+    SwiftName: "doCopyTo(sink:sinkOffset:start:count:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "decodeToStringStart:end:"
+    MethodKind: "Instance"
+    SwiftName: "decodeToString(start:end:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "findClosingQuotePosition:limit:"
+    MethodKind: "Instance"
+    SwiftName: "findClosingQuote(position:limit:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "findNextNonWhitespacePosition:limit:"
+    MethodKind: "Instance"
+    SwiftName: "findNextNonWhitespace(position:limit:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "scanStringStart:limit:reader:"
+    MethodKind: "Instance"
+    SwiftName: "scanString(start:limit:reader:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "GBSGhostJsonReader * _Nonnull"
+- Name: "GBSGhostJsonException"
+  SwiftName: "GhostJsonException"
+  Properties:
+  - Name: "column"
+    PropertyKind: "Instance"
+    SwiftName: "column"
+    Type: "int32_t"
+  - Name: "line"
+    PropertyKind: "Instance"
+    SwiftName: "line"
+    Type: "int32_t"
+  - Name: "message"
+    PropertyKind: "Instance"
+    SwiftName: "message"
+    Type: "NSString * _Nonnull"
+  - Name: "path"
+    PropertyKind: "Instance"
+    SwiftName: "path"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "initWithMessage:line:column:path:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:line:column:path:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "NSString * _Nonnull"
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+    Availability: "nonswift"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Availability: "nonswift"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Availability: "nonswift"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Availability: "nonswift"
+- Name: "GBSBooleanSerializer"
+  SwiftName: "BooleanSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSBoolean * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSBoolean * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSBoolean * _Nonnull"
+- Name: "GBSDoubleSerializer"
+  SwiftName: "DoubleSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSDouble * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSDouble * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSDouble * _Nonnull"
+- Name: "GBSIntArraySerializer"
+  SwiftName: "IntArraySerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSKotlinIntArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSKotlinIntArray * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSKotlinIntArray * _Nonnull"
+- Name: "GBSIntSerializer"
+  SwiftName: "IntSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSInt * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSInt * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSInt * _Nonnull"
+- Name: "GBSListSerializer"
+  SwiftName: "ListSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "initWithItemSerializer:"
+    MethodKind: "Instance"
+    SwiftName: "init(itemSerializer:)"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSGhostSerializer> _Nonnull"
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "NSArray<id> * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "NSArray<id> * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "NSArray<id> * _Nonnull"
+- Name: "GBSLongArraySerializer"
+  SwiftName: "LongArraySerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSKotlinLongArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSKotlinLongArray * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSKotlinLongArray * _Nonnull"
+- Name: "GBSLongSerializer"
+  SwiftName: "LongSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSLong * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSLong * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSLong * _Nonnull"
+- Name: "GBSMapSerializer"
+  SwiftName: "MapSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "initWithValueSerializer:"
+    MethodKind: "Instance"
+    SwiftName: "init(valueSerializer:)"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSGhostSerializer> _Nonnull"
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "NSDictionary<NSString *, id> * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "NSDictionary<NSString *, id> * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "NSDictionary<NSString *, id> * _Nonnull"
+- Name: "GBSStringSerializer"
+  SwiftName: "StringSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+- Name: "GBSFlatByteArrayWriter"
+  SwiftName: "FlatByteArrayWriter"
+  Properties:
+  - Name: "array"
+    PropertyKind: "Instance"
+    SwiftName: "array"
+    Type: "GBSKotlinByteArray * _Nonnull"
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "initWithInitialCapacity:"
+    MethodKind: "Instance"
+    SwiftName: "init(initialCapacity:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "reset"
+    MethodKind: "Instance"
+    SwiftName: "reset()"
+    ResultType: "void"
+  - Selector: "toByteArray"
+    MethodKind: "Instance"
+    SwiftName: "toByteArray()"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "toStringUtf8"
+    MethodKind: "Instance"
+    SwiftName: "toStringUtf8()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "writeBytes:"
+    MethodKind: "Instance"
+    SwiftName: "write(bytes:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "writeBytes:offset:length:"
+    MethodKind: "Instance"
+    SwiftName: "write(bytes:offset:length:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeByteString:"
+    MethodKind: "Instance"
+    SwiftName: "write(byteString:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "writeByteByteAsInt:"
+    MethodKind: "Instance"
+    SwiftName: "writeByte(byteAsInt:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeUtf8Text:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8(text:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "writeUtf8Text:beginIndex:endIndex:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8(text:beginIndex:endIndex:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+- Name: "GBSWriterSinkPair"
+  SwiftName: "WriterSinkPair"
+  Properties:
+  - Name: "byteWriter"
+    PropertyKind: "Instance"
+    SwiftName: "byteWriter"
+    Type: "GBSFlatByteArrayWriter * _Nonnull"
+  - Name: "writer"
+    PropertyKind: "Instance"
+    SwiftName: "writer"
+    Type: "GBSGhostJsonFlatWriter * _Nonnull"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+- Name: "GBSGhostPoolsKt"
+  SwiftName: "GhostPoolsKt"
+  Methods:
+  - Selector: "acquireCharBufferMinSize:"
+    MethodKind: "Class"
+    SwiftName: "acquireCharBuffer(minSize:)"
+    ResultType: "GBSKotlinCharArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "acquireScratchBufferMinSize:"
+    MethodKind: "Class"
+    SwiftName: "acquireScratchBuffer(minSize:)"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "releaseCharBufferBuffer:"
+    MethodKind: "Class"
+    SwiftName: "releaseCharBuffer(buffer:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinCharArray * _Nonnull"
+  - Selector: "releaseScratchBufferBuffer:"
+    MethodKind: "Class"
+    SwiftName: "releaseScratchBuffer(buffer:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+- Name: "GBSGhostKt"
+  SwiftName: "GhostKt"
+  Methods:
+  - Selector: "createAtomicMap"
+    MethodKind: "Class"
+    SwiftName: "createAtomicMap()"
+    ResultType: "GBSMutableDictionary<id, id> * _Nonnull"
+  - Selector: "discoverRegistries"
+    MethodKind: "Class"
+    SwiftName: "discoverRegistries()"
+    ResultType: "NSArray<id<GBSGhostRegistry>> * _Nonnull"
+  - Selector: "ghostInternalEncodeAndDiscardBlock:"
+    MethodKind: "Class"
+    SwiftName: "ghostInternalEncodeAndDiscard(block:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "void (^ _Nonnull)(GBSGhostJsonFlatWriter * _Nonnull)"
+  - Selector: "ghostInternalEncodeAndDrainToSink:block:"
+    MethodKind: "Class"
+    SwiftName: "ghostInternalEncodeAndDrainTo(sink:block:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSink> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(GBSGhostJsonFlatWriter * _Nonnull)"
+  - Selector: "ghostInternalEncodeToStringBlock:"
+    MethodKind: "Class"
+    SwiftName: "ghostInternalEncodeToString(block:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "void (^ _Nonnull)(GBSGhostJsonFlatWriter * _Nonnull)"
+  - Selector: "ghostInternalEncodeWithWriterBlock:"
+    MethodKind: "Class"
+    SwiftName: "ghostInternalEncodeWithWriter(block:)"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "void (^ _Nonnull)(GBSGhostJsonFlatWriter * _Nonnull)"
+  - Selector: "ghostInternalUseReaderBytes:block:"
+    MethodKind: "Class"
+    SwiftName: "ghostInternalUseReader(bytes:block:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "id _Nullable (^ _Nonnull)(GBSGhostJsonReader * _Nonnull)"
+  - Selector: "ghostInternalUseSourceSource:block:"
+    MethodKind: "Class"
+    SwiftName: "ghostInternalUseSource(source:block:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+    - Position: 1
+      Type: "id _Nullable (^ _Nonnull)(GBSGhostJsonReader * _Nonnull)"
+  - Selector: "runSynchronizedLock:block:"
+    MethodKind: "Class"
+    SwiftName: "runSynchronized(lock:block:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id _Nonnull"
+    - Position: 1
+      Type: "id _Nullable (^ _Nonnull)(void)"
+- Name: "GBSGhostSource_iosKt"
+  SwiftName: "GhostSource_iosKt"
+  Methods:
+  - Selector: "createByteArraySourceData:"
+    MethodKind: "Class"
+    SwiftName: "createByteArraySource(data:)"
+    ResultType: "id<GBSGhostSource> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+- Name: "GBSGhostSourceKt"
+  SwiftName: "GhostSourceKt"
+  Methods:
+  - Selector: "createSourceBridgeSource:"
+    MethodKind: "Class"
+    SwiftName: "createSourceBridge(source:)"
+    ResultType: "id<GBSGhostSource> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+- Name: "GBSGhostJsonConstantsKt"
+  SwiftName: "GhostJsonConstantsKt"
+  Methods:
+  - Selector: "ignore:"
+    MethodKind: "Class"
+    SwiftName: "ignore(_:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+- Name: "GBSPlatform_nativeKt"
+  SwiftName: "Platform_nativeKt"
+  Properties:
+  - Name: "isJvm"
+    PropertyKind: "Class"
+    SwiftName: "isJvm"
+    Type: "BOOL"
+- Name: "GBSOkioTimeout"
+  SwiftName: "OkioTimeout"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+- Name: "GBSOkioTimeoutCompanion"
+  SwiftName: "OkioTimeout.Companion"
+  Properties:
+  - Name: "NONE"
+    PropertyKind: "Instance"
+    SwiftName: "NONE"
+    Type: "GBSOkioTimeout * _Nonnull"
+- Name: "GBSOkioBuffer"
+  SwiftName: "OkioBuffer"
+  Properties:
+  - Name: "buffer"
+    PropertyKind: "Instance"
+    SwiftName: "buffer"
+    Type: "GBSOkioBuffer * _Nonnull"
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int64_t"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "clear"
+    MethodKind: "Instance"
+    SwiftName: "clear()"
+    ResultType: "void"
+  - Selector: "closeAndReturnError:"
+    MethodKind: "Instance"
+    SwiftName: "close()"
+    ResultType: "BOOL"
+  - Selector: "completeSegmentByteCount"
+    MethodKind: "Instance"
+    SwiftName: "completeSegmentByteCount()"
+    ResultType: "int64_t"
+  - Selector: "doCopy"
+    MethodKind: "Instance"
+    SwiftName: "doCopy()"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+  - Selector: "doCopyToOut:offset:"
+    MethodKind: "Instance"
+    SwiftName: "doCopyTo(out:offset:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "doCopyToOut:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "doCopyTo(out:offset:byteCount:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+    - Position: 2
+      Type: "int64_t"
+  - Selector: "emit"
+    MethodKind: "Instance"
+    SwiftName: "emit()"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+  - Selector: "emitCompleteSegments"
+    MethodKind: "Instance"
+    SwiftName: "emitCompleteSegments()"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "exhausted"
+    MethodKind: "Instance"
+    SwiftName: "exhausted()"
+    ResultType: "BOOL"
+  - Selector: "flushAndReturnError:"
+    MethodKind: "Instance"
+    SwiftName: "flush()"
+    ResultType: "BOOL"
+  - Selector: "getPos:"
+    MethodKind: "Instance"
+    SwiftName: "get(pos:)"
+    ResultType: "int8_t"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "hmacSha1Key:"
+    MethodKind: "Instance"
+    SwiftName: "hmacSha1(key:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "hmacSha256Key:"
+    MethodKind: "Instance"
+    SwiftName: "hmacSha256(key:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "hmacSha512Key:"
+    MethodKind: "Instance"
+    SwiftName: "hmacSha512(key:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "indexOfB:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(b:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int8_t"
+  - Selector: "indexOfB:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(b:fromIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int8_t"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "indexOfB:fromIndex:toIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(b:fromIndex:toIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int8_t"
+    - Position: 1
+      Type: "int64_t"
+    - Position: 2
+      Type: "int64_t"
+  - Selector: "indexOfBytes:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(bytes:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "indexOfBytes:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(bytes:fromIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "indexOfElementTargetBytes:"
+    MethodKind: "Instance"
+    SwiftName: "indexOfElement(targetBytes:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "indexOfElementTargetBytes:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOfElement(targetBytes:fromIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "md5"
+    MethodKind: "Instance"
+    SwiftName: "md5()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "peek"
+    MethodKind: "Instance"
+    SwiftName: "peek()"
+    ResultType: "id<GBSOkioBufferedSource> _Nonnull"
+  - Selector: "rangeEqualsOffset:bytes:"
+    MethodKind: "Instance"
+    SwiftName: "rangeEquals(offset:bytes:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "rangeEqualsOffset:bytes:bytesOffset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "rangeEquals(offset:bytes:bytesOffset:byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "readSink:"
+    MethodKind: "Instance"
+    SwiftName: "read(sink:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "readSink:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "read(sink:offset:byteCount:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "readSink:byteCount:error:"
+    MethodKind: "Instance"
+    SwiftName: "read(sink:byteCount:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "readAllSink:"
+    MethodKind: "Instance"
+    SwiftName: "readAll(sink:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioSink> _Nonnull"
+  - Selector: "readAndWriteUnsafeUnsafeCursor:"
+    MethodKind: "Instance"
+    SwiftName: "readAndWriteUnsafe(unsafeCursor:)"
+    ResultType: "GBSOkioBufferUnsafeCursor * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBufferUnsafeCursor * _Nonnull"
+  - Selector: "readByte"
+    MethodKind: "Instance"
+    SwiftName: "readByte()"
+    ResultType: "int8_t"
+  - Selector: "readByteArray"
+    MethodKind: "Instance"
+    SwiftName: "readByteArray()"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "readByteArrayByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readByteArray(byteCount:)"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "readByteString"
+    MethodKind: "Instance"
+    SwiftName: "readByteString()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "readByteStringByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readByteString(byteCount:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "readDecimalLong"
+    MethodKind: "Instance"
+    SwiftName: "readDecimalLong()"
+    ResultType: "int64_t"
+  - Selector: "readFullySink:"
+    MethodKind: "Instance"
+    SwiftName: "readFully(sink:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "readFullySink:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readFully(sink:byteCount:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "readHexadecimalUnsignedLong"
+    MethodKind: "Instance"
+    SwiftName: "readHexadecimalUnsignedLong()"
+    ResultType: "int64_t"
+  - Selector: "readInt"
+    MethodKind: "Instance"
+    SwiftName: "readInt()"
+    ResultType: "int32_t"
+  - Selector: "readIntLe"
+    MethodKind: "Instance"
+    SwiftName: "readIntLe()"
+    ResultType: "int32_t"
+  - Selector: "readLong"
+    MethodKind: "Instance"
+    SwiftName: "readLong()"
+    ResultType: "int64_t"
+  - Selector: "readLongLe"
+    MethodKind: "Instance"
+    SwiftName: "readLongLe()"
+    ResultType: "int64_t"
+  - Selector: "readShort"
+    MethodKind: "Instance"
+    SwiftName: "readShort()"
+    ResultType: "int16_t"
+  - Selector: "readShortLe"
+    MethodKind: "Instance"
+    SwiftName: "readShortLe()"
+    ResultType: "int16_t"
+  - Selector: "readUnsafeUnsafeCursor:"
+    MethodKind: "Instance"
+    SwiftName: "readUnsafe(unsafeCursor:)"
+    ResultType: "GBSOkioBufferUnsafeCursor * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBufferUnsafeCursor * _Nonnull"
+  - Selector: "readUtf8"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "readUtf8ByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8(byteCount:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "readUtf8CodePoint"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8CodePoint()"
+    ResultType: "int32_t"
+  - Selector: "readUtf8Line"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8Line()"
+    ResultType: "NSString * _Nullable"
+  - Selector: "readUtf8LineStrict"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8LineStrict()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "readUtf8LineStrictLimit:"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8LineStrict(limit:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "requestByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "request(byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "requireByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "require(byteCount:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "selectOptions:"
+    MethodKind: "Instance"
+    SwiftName: "select(options:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "NSArray<GBSOkioByteString *> * _Nonnull"
+  - Selector: "selectOptions_:"
+    MethodKind: "Instance"
+    SwiftName: "select(options:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "NSArray<id> * _Nonnull"
+  - Selector: "sha1"
+    MethodKind: "Instance"
+    SwiftName: "sha1()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "sha256"
+    MethodKind: "Instance"
+    SwiftName: "sha256()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "sha512"
+    MethodKind: "Instance"
+    SwiftName: "sha512()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "skipByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "skip(byteCount:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "snapshot"
+    MethodKind: "Instance"
+    SwiftName: "snapshot()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "snapshotByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "snapshot(byteCount:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "timeout"
+    MethodKind: "Instance"
+    SwiftName: "timeout()"
+    ResultType: "GBSOkioTimeout * _Nonnull"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "writeSource:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "writeSource:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:offset:byteCount:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeSource:byteCount:error:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeByteString:"
+    MethodKind: "Instance"
+    SwiftName: "write(byteString:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "writeByteString:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "write(byteString:offset:byteCount:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeSource:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:byteCount:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioSource> _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeAllSource:"
+    MethodKind: "Instance"
+    SwiftName: "writeAll(source:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioSource> _Nonnull"
+  - Selector: "writeByteB:"
+    MethodKind: "Instance"
+    SwiftName: "writeByte(b:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeDecimalLongV:"
+    MethodKind: "Instance"
+    SwiftName: "writeDecimalLong(v:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeHexadecimalUnsignedLongV:"
+    MethodKind: "Instance"
+    SwiftName: "writeHexadecimalUnsignedLong(v:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeIntI:"
+    MethodKind: "Instance"
+    SwiftName: "writeInt(i:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeIntLeI:"
+    MethodKind: "Instance"
+    SwiftName: "writeIntLe(i:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeLongV:"
+    MethodKind: "Instance"
+    SwiftName: "writeLong(v:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeLongLeV:"
+    MethodKind: "Instance"
+    SwiftName: "writeLongLe(v:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeShortS:"
+    MethodKind: "Instance"
+    SwiftName: "writeShort(s:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeShortLeS:"
+    MethodKind: "Instance"
+    SwiftName: "writeShortLe(s:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeUtf8String:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8(string:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "writeUtf8String:beginIndex:endIndex:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8(string:beginIndex:endIndex:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeUtf8CodePointCodePoint:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8CodePoint(codePoint:)"
+    ResultType: "GBSOkioBuffer * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+- Name: "GBSOkioBufferUnsafeCursor"
+  SwiftName: "OkioBuffer.UnsafeCursor"
+  Properties:
+  - Name: "buffer"
+    PropertyKind: "Instance"
+    SwiftName: "buffer"
+    Type: "GBSOkioBuffer * _Nullable"
+  - Name: "data"
+    PropertyKind: "Instance"
+    SwiftName: "data"
+    Type: "GBSKotlinByteArray * _Nullable"
+  - Name: "end"
+    PropertyKind: "Instance"
+    SwiftName: "end"
+    Type: "int32_t"
+  - Name: "offset"
+    PropertyKind: "Instance"
+    SwiftName: "offset"
+    Type: "int64_t"
+  - Name: "readWrite"
+    PropertyKind: "Instance"
+    SwiftName: "readWrite"
+    Type: "BOOL"
+  - Name: "start"
+    PropertyKind: "Instance"
+    SwiftName: "start"
+    Type: "int32_t"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "closeAndReturnError:"
+    MethodKind: "Instance"
+    SwiftName: "close()"
+    ResultType: "BOOL"
+  - Selector: "expandBufferMinByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "expandBuffer(minByteCount:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "int32_t"
+  - Selector: "resizeBufferNewSize:"
+    MethodKind: "Instance"
+    SwiftName: "resizeBuffer(newSize:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "seekOffset:"
+    MethodKind: "Instance"
+    SwiftName: "seek(offset:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+- Name: "GBSOkioByteString"
+  SwiftName: "OkioByteString"
+  Properties:
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "base64"
+    MethodKind: "Instance"
+    SwiftName: "base64()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "base64Url"
+    MethodKind: "Instance"
+    SwiftName: "base64Url()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "compareToOther:"
+    MethodKind: "Instance"
+    SwiftName: "compareTo(other:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "doCopyIntoOffset:target:targetOffset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "doCopyInto(offset:target:targetOffset:byteCount:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "endsWithSuffix:"
+    MethodKind: "Instance"
+    SwiftName: "endsWith(suffix:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "endsWithSuffix_:"
+    MethodKind: "Instance"
+    SwiftName: "endsWith(suffix:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "getIndex_:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "int8_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "hex"
+    MethodKind: "Instance"
+    SwiftName: "hex()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "hmacSha1Key:"
+    MethodKind: "Instance"
+    SwiftName: "hmacSha1(key:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "hmacSha256Key:"
+    MethodKind: "Instance"
+    SwiftName: "hmacSha256(key:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "hmacSha512Key:"
+    MethodKind: "Instance"
+    SwiftName: "hmacSha512(key:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "indexOfOther:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(other:fromIndex:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "indexOfOther:fromIndex_:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(other:fromIndex:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "lastIndexOfOther:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "lastIndexOf(other:fromIndex:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "lastIndexOfOther:fromIndex_:"
+    MethodKind: "Instance"
+    SwiftName: "lastIndexOf(other:fromIndex:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "md5"
+    MethodKind: "Instance"
+    SwiftName: "md5()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "rangeEqualsOffset:other:otherOffset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "rangeEquals(offset:other:otherOffset:byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "rangeEqualsOffset:other:otherOffset:byteCount_:"
+    MethodKind: "Instance"
+    SwiftName: "rangeEquals(offset:other:otherOffset:byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "sha1"
+    MethodKind: "Instance"
+    SwiftName: "sha1()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "sha256"
+    MethodKind: "Instance"
+    SwiftName: "sha256()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "sha512"
+    MethodKind: "Instance"
+    SwiftName: "sha512()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "startsWithPrefix:"
+    MethodKind: "Instance"
+    SwiftName: "startsWith(prefix:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "startsWithPrefix_:"
+    MethodKind: "Instance"
+    SwiftName: "startsWith(prefix:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "substringBeginIndex:endIndex:"
+    MethodKind: "Instance"
+    SwiftName: "substring(beginIndex:endIndex:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "toAsciiLowercase"
+    MethodKind: "Instance"
+    SwiftName: "toAsciiLowercase()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "toAsciiUppercase"
+    MethodKind: "Instance"
+    SwiftName: "toAsciiUppercase()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "toByteArray"
+    MethodKind: "Instance"
+    SwiftName: "toByteArray()"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "utf8"
+    MethodKind: "Instance"
+    SwiftName: "utf8()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSOkioByteStringCompanion"
+  SwiftName: "OkioByteString.Companion"
+  Properties:
+  - Name: "EMPTY"
+    PropertyKind: "Instance"
+    SwiftName: "EMPTY"
+    Type: "GBSOkioByteString * _Nonnull"
+  Methods:
+  - Selector: "ofData:"
+    MethodKind: "Instance"
+    SwiftName: "of(data:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "decodeBase64:"
+    MethodKind: "Instance"
+    SwiftName: "decodeBase64(_:)"
+    ResultType: "GBSOkioByteString * _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "decodeHex:"
+    MethodKind: "Instance"
+    SwiftName: "decodeHex(_:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "encodeUtf8:"
+    MethodKind: "Instance"
+    SwiftName: "encodeUtf8(_:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "toByteString:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "toByteString(_:offset:byteCount:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "toByteString:"
+    MethodKind: "Instance"
+    SwiftName: "toByteString(_:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSData * _Nonnull"
+- Name: "GBSOkioIOException"
+  SwiftName: "OkioIOException"
+  Methods:
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "GBSKotlinThrowable * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Availability: "nonswift"
+- Name: "GBSGhostBenchmarkBridge"
+  SwiftName: "GhostBenchmarkBridge"
+  Methods:
+  - Selector: "parseCharacterResponseJson:"
+    MethodKind: "Instance"
+    SwiftName: "parseCharacterResponse(json:)"
+    ResultType: "GBSCharacterResponse * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "parseCharacterResponseFromBytesBytes:"
+    MethodKind: "Instance"
+    SwiftName: "parseCharacterResponseFromBytes(bytes:)"
+    ResultType: "GBSCharacterResponse * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "parseCharacterResponseStreamingBytes:"
+    MethodKind: "Instance"
+    SwiftName: "parseCharacterResponseStreaming(bytes:)"
+    ResultType: "GBSCharacterResponse * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "prewarm"
+    MethodKind: "Instance"
+    SwiftName: "prewarm()"
+    ResultType: "void"
+  - Selector: "serializeCharacterResponseValue:"
+    MethodKind: "Instance"
+    SwiftName: "serializeCharacterResponse(value:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSCharacterResponse * _Nonnull"
+  - Selector: "serializeCharacterResponseStreamingValue:"
+    MethodKind: "Instance"
+    SwiftName: "serializeCharacterResponseStreaming(value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSCharacterResponse * _Nonnull"
+  - Selector: "serializeCharacterResponseToBytesValue:"
+    MethodKind: "Instance"
+    SwiftName: "serializeCharacterResponseToBytes(value:)"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSCharacterResponse * _Nonnull"
+- Name: "GBSCharacterResponse"
+  SwiftName: "CharacterResponse"
+  Properties:
+  - Name: "info"
+    PropertyKind: "Instance"
+    SwiftName: "info"
+    Type: "GBSPageInfo * _Nonnull"
+  - Name: "results"
+    PropertyKind: "Instance"
+    SwiftName: "results"
+    Type: "NSArray<GBSGhostCharacter *> * _Nonnull"
+  Methods:
+  - Selector: "initWithInfo:results:"
+    MethodKind: "Instance"
+    SwiftName: "init(info:results:)"
+    Parameters:
+    - Position: 0
+      Type: "GBSPageInfo * _Nonnull"
+    - Position: 1
+      Type: "NSArray<GBSGhostCharacter *> * _Nonnull"
+  - Selector: "doCopyInfo:results:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(info:results:)"
+    ResultType: "GBSCharacterResponse * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSPageInfo * _Nonnull"
+    - Position: 1
+      Type: "NSArray<GBSGhostCharacter *> * _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSGhostCharacter"
+  SwiftName: "GhostCharacter"
+  Properties:
+  - Name: "created"
+    PropertyKind: "Instance"
+    SwiftName: "created"
+    Type: "NSString * _Nonnull"
+  - Name: "episode"
+    PropertyKind: "Instance"
+    SwiftName: "episode"
+    Type: "NSArray<NSString *> * _Nonnull"
+  - Name: "gender"
+    PropertyKind: "Instance"
+    SwiftName: "gender"
+    Type: "NSString * _Nonnull"
+  - Name: "id"
+    PropertyKind: "Instance"
+    SwiftName: "id"
+    Type: "int32_t"
+  - Name: "image"
+    PropertyKind: "Instance"
+    SwiftName: "image"
+    Type: "NSString * _Nonnull"
+  - Name: "location"
+    PropertyKind: "Instance"
+    SwiftName: "location"
+    Type: "GBSLocationRef * _Nonnull"
+  - Name: "name"
+    PropertyKind: "Instance"
+    SwiftName: "name"
+    Type: "NSString * _Nonnull"
+  - Name: "origin"
+    PropertyKind: "Instance"
+    SwiftName: "origin"
+    Type: "GBSLocationRef * _Nonnull"
+  - Name: "species"
+    PropertyKind: "Instance"
+    SwiftName: "species"
+    Type: "NSString * _Nonnull"
+  - Name: "status"
+    PropertyKind: "Instance"
+    SwiftName: "status"
+    Type: "GBSCharacterStatus * _Nonnull"
+  - Name: "type"
+    PropertyKind: "Instance"
+    SwiftName: "type"
+    Type: "NSString * _Nonnull"
+  - Name: "url"
+    PropertyKind: "Instance"
+    SwiftName: "url"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "initWithId:name:status:species:type:gender:origin:location:image:episode:url:created:"
+    MethodKind: "Instance"
+    SwiftName: "init(id:name:status:species:type:gender:origin:location:image:episode:url:created:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+    - Position: 2
+      Type: "GBSCharacterStatus * _Nonnull"
+    - Position: 3
+      Type: "NSString * _Nonnull"
+    - Position: 4
+      Type: "NSString * _Nonnull"
+    - Position: 5
+      Type: "NSString * _Nonnull"
+    - Position: 6
+      Type: "GBSLocationRef * _Nonnull"
+    - Position: 7
+      Type: "GBSLocationRef * _Nonnull"
+    - Position: 8
+      Type: "NSString * _Nonnull"
+    - Position: 9
+      Type: "NSArray<NSString *> * _Nonnull"
+    - Position: 10
+      Type: "NSString * _Nonnull"
+    - Position: 11
+      Type: "NSString * _Nonnull"
+  - Selector: "doCopyId:name:status:species:type:gender:origin:location:image:episode:url:created:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(id:name:status:species:type:gender:origin:location:image:episode:url:created:)"
+    ResultType: "GBSGhostCharacter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+    - Position: 2
+      Type: "GBSCharacterStatus * _Nonnull"
+    - Position: 3
+      Type: "NSString * _Nonnull"
+    - Position: 4
+      Type: "NSString * _Nonnull"
+    - Position: 5
+      Type: "NSString * _Nonnull"
+    - Position: 6
+      Type: "GBSLocationRef * _Nonnull"
+    - Position: 7
+      Type: "GBSLocationRef * _Nonnull"
+    - Position: 8
+      Type: "NSString * _Nonnull"
+    - Position: 9
+      Type: "NSArray<NSString *> * _Nonnull"
+    - Position: 10
+      Type: "NSString * _Nonnull"
+    - Position: 11
+      Type: "NSString * _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSLocationRef"
+  SwiftName: "LocationRef"
+  Properties:
+  - Name: "name"
+    PropertyKind: "Instance"
+    SwiftName: "name"
+    Type: "NSString * _Nonnull"
+  - Name: "url"
+    PropertyKind: "Instance"
+    SwiftName: "url"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "initWithName:url:"
+    MethodKind: "Instance"
+    SwiftName: "init(name:url:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "doCopyName:url:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(name:url:)"
+    ResultType: "GBSLocationRef * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSCharacterStatus"
+  SwiftBridge: "CharacterStatus"
+  SwiftName: "__CharacterStatus"
+  SwiftPrivate: true
+  Properties:
+  - Name: "alive"
+    PropertyKind: "Class"
+    SwiftName: "alive"
+    Type: "GBSCharacterStatus * _Nonnull"
+  - Name: "dead"
+    PropertyKind: "Class"
+    SwiftName: "dead"
+    Type: "GBSCharacterStatus * _Nonnull"
+  - Name: "unknown"
+    PropertyKind: "Class"
+    SwiftName: "unknown"
+    Type: "GBSCharacterStatus * _Nonnull"
+  Methods:
+  - Selector: "initWithName:ordinal:"
+    MethodKind: "Instance"
+    SwiftName: "init(name:ordinal:)"
+    Availability: "nonswift"
+- Name: "GBSPageInfo"
+  SwiftName: "PageInfo"
+  Properties:
+  - Name: "count"
+    PropertyKind: "Instance"
+    SwiftName: "count"
+    Type: "int32_t"
+  - Name: "next"
+    PropertyKind: "Instance"
+    SwiftName: "next"
+    Type: "NSString * _Nullable"
+  - Name: "pages"
+    PropertyKind: "Instance"
+    SwiftName: "pages"
+    Type: "int32_t"
+  - Name: "prev"
+    PropertyKind: "Instance"
+    SwiftName: "prev"
+    Type: "NSString * _Nullable"
+  Methods:
+  - Selector: "initWithCount:pages:next:prev:"
+    MethodKind: "Instance"
+    SwiftName: "init(count:pages:next:prev:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "NSString * _Nullable"
+    - Position: 3
+      Type: "NSString * _Nullable"
+  - Selector: "doCopyCount:pages:next:prev:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(count:pages:next:prev:)"
+    ResultType: "GBSPageInfo * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "NSString * _Nullable"
+    - Position: 3
+      Type: "NSString * _Nullable"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "GBSCharacterResponseSerializer"
+  SwiftName: "CharacterResponseSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSCharacterResponse * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSCharacterResponse * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSCharacterResponse * _Nonnull"
+  - Selector: "warmUp"
+    MethodKind: "Instance"
+    SwiftName: "warmUp()"
+    ResultType: "void"
+- Name: "GBSCharacterStatusSerializer"
+  SwiftName: "CharacterStatusSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSCharacterStatus * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSCharacterStatus * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSCharacterStatus * _Nonnull"
+  - Selector: "warmUp"
+    MethodKind: "Instance"
+    SwiftName: "warmUp()"
+    ResultType: "void"
+- Name: "GBSGhostCharacterSerializer"
+  SwiftName: "GhostCharacterSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSGhostCharacter * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSGhostCharacter * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSGhostCharacter * _Nonnull"
+  - Selector: "warmUp"
+    MethodKind: "Instance"
+    SwiftName: "warmUp()"
+    ResultType: "void"
+- Name: "GBSLocationRefSerializer"
+  SwiftName: "LocationRefSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSLocationRef * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSLocationRef * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSLocationRef * _Nonnull"
+  - Selector: "warmUp"
+    MethodKind: "Instance"
+    SwiftName: "warmUp()"
+    ResultType: "void"
+- Name: "GBSPageInfoSerializer"
+  SwiftName: "PageInfoSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "GBSPageInfo * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSPageInfo * _Nonnull"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "GBSPageInfo * _Nonnull"
+  - Selector: "warmUp"
+    MethodKind: "Instance"
+    SwiftName: "warmUp()"
+    ResultType: "void"
+- Name: "GBSGhostModuleRegistry_ios_benchmark"
+  SwiftName: "GhostModuleRegistry_ios_benchmark"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "getAllSerializers"
+    MethodKind: "Instance"
+    SwiftName: "getAllSerializers()"
+    ResultType: "NSDictionary<id<GBSKotlinKClass>, id<GBSGhostSerializer>> * _Nonnull"
+  - Selector: "getSerializerClazz:"
+    MethodKind: "Instance"
+    SwiftName: "getSerializer(clazz:)"
+    ResultType: "id<GBSGhostSerializer> _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSKotlinKClass> _Nonnull"
+  - Selector: "prewarm"
+    MethodKind: "Instance"
+    SwiftName: "prewarm()"
+    ResultType: "void"
+  - Selector: "registeredCount"
+    MethodKind: "Instance"
+    SwiftName: "registeredCount()"
+    ResultType: "int32_t"
+- Name: "GBSGhostModuleRegistry_ios_benchmarkCompanion"
+  SwiftName: "GhostModuleRegistry_ios_benchmark.Companion"
+  Properties:
+  - Name: "INSTANCE"
+    PropertyKind: "Instance"
+    SwiftName: "INSTANCE"
+    Type: "GBSGhostModuleRegistry_ios_benchmark * _Nonnull"
+Protocols:
+- Name: "GBSKotlinIterator"
+  SwiftName: "KotlinIterator"
+  Methods:
+  - Selector: "hasNext"
+    MethodKind: "Instance"
+    SwiftName: "hasNext()"
+    ResultType: "BOOL"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "id _Nullable"
+- Name: "GBSKotlinComparable"
+  SwiftName: "KotlinComparable"
+  Methods:
+  - Selector: "compareToOther:"
+    MethodKind: "Instance"
+    SwiftName: "compareTo(other:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+- Name: "GBSKotlinKType"
+  SwiftName: "KotlinKType"
+  Properties:
+  - Name: "arguments"
+    PropertyKind: "Instance"
+    SwiftName: "arguments"
+    Type: "NSArray<GBSKotlinKTypeProjection *> * _Nonnull"
+  - Name: "classifier"
+    PropertyKind: "Instance"
+    SwiftName: "classifier"
+    Type: "id<GBSKotlinKClassifier> _Nullable"
+  - Name: "isMarkedNullable"
+    PropertyKind: "Instance"
+    SwiftName: "isMarkedNullable"
+    Type: "BOOL"
+- Name: "GBSKotlinKClassifier"
+  SwiftName: "KotlinKClassifier"
+- Name: "GBSKotlinKClass"
+  SwiftName: "KotlinKClass"
+  Properties:
+  - Name: "qualifiedName"
+    PropertyKind: "Instance"
+    SwiftName: "qualifiedName"
+    Type: "NSString * _Nullable"
+  - Name: "simpleName"
+    PropertyKind: "Instance"
+    SwiftName: "simpleName"
+    Type: "NSString * _Nullable"
+  Methods:
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "isInstanceValue:"
+    MethodKind: "Instance"
+    SwiftName: "isInstance(value:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+- Name: "GBSKotlinKAnnotatedElement"
+  SwiftName: "KotlinKAnnotatedElement"
+- Name: "GBSKotlinKDeclarationContainer"
+  SwiftName: "KotlinKDeclarationContainer"
+- Name: "GBSGhostSerializer"
+  SwiftName: "GhostSerializer"
+  Properties:
+  - Name: "typeName"
+    PropertyKind: "Instance"
+    SwiftName: "typeName"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "deserializeReader:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(reader:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonReader * _Nonnull"
+  - Selector: "deserializeSource:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(source:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSource> _Nonnull"
+  - Selector: "serializeWriter:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonFlatWriter * _Nonnull"
+    - Position: 1
+      Type: "id _Nullable"
+  - Selector: "serializeWriter:value_:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(writer:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSGhostJsonWriter * _Nonnull"
+    - Position: 1
+      Type: "id _Nullable"
+  - Selector: "serializeSink:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(sink:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioBufferedSink> _Nonnull"
+    - Position: 1
+      Type: "id _Nullable"
+  - Selector: "warmUp"
+    MethodKind: "Instance"
+    SwiftName: "warmUp()"
+    ResultType: "void"
+- Name: "GBSGhostSource"
+  SwiftName: "GhostSource"
+  Properties:
+  - Name: "rawSourceData"
+    PropertyKind: "Instance"
+    SwiftName: "rawSourceData"
+    Type: "GBSKotlinByteArray * _Nonnull"
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "calculateHashStart:length:"
+    MethodKind: "Instance"
+    SwiftName: "calculateHash(start:length:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "contentEqualsStart:expected:"
+    MethodKind: "Instance"
+    SwiftName: "contentEquals(start:expected:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "contentEqualsStringStart:length:str:"
+    MethodKind: "Instance"
+    SwiftName: "contentEqualsString(start:length:str:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "NSString * _Nonnull"
+  - Selector: "doCopyToSink:sinkOffset:start:count:"
+    MethodKind: "Instance"
+    SwiftName: "doCopyTo(sink:sinkOffset:start:count:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "decodeJsonStringRangeStart:end:isKnown7BitContent:"
+    MethodKind: "Instance"
+    SwiftName: "decodeJsonStringRange(start:end:isKnown7BitContent:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "BOOL"
+  - Selector: "decodeToStringStart:end:"
+    MethodKind: "Instance"
+    SwiftName: "decodeToString(start:end:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "findClosingQuotePosition:limit:"
+    MethodKind: "Instance"
+    SwiftName: "findClosingQuote(position:limit:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "findNextNonWhitespacePosition:limit:"
+    MethodKind: "Instance"
+    SwiftName: "findNextNonWhitespace(position:limit:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "scanStringStart:limit:reader:"
+    MethodKind: "Instance"
+    SwiftName: "scanString(start:limit:reader:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "GBSGhostJsonReader * _Nonnull"
+- Name: "GBSGhostRegistry"
+  SwiftName: "GhostRegistry"
+  Methods:
+  - Selector: "getAllSerializers"
+    MethodKind: "Instance"
+    SwiftName: "getAllSerializers()"
+    ResultType: "NSDictionary<id<GBSKotlinKClass>, id<GBSGhostSerializer>> * _Nonnull"
+  - Selector: "getSerializerClazz:"
+    MethodKind: "Instance"
+    SwiftName: "getSerializer(clazz:)"
+    ResultType: "id<GBSGhostSerializer> _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSKotlinKClass> _Nonnull"
+  - Selector: "prewarm"
+    MethodKind: "Instance"
+    SwiftName: "prewarm()"
+    ResultType: "void"
+  - Selector: "registeredCount"
+    MethodKind: "Instance"
+    SwiftName: "registeredCount()"
+    ResultType: "int32_t"
+- Name: "GBSOkioBufferedSink"
+  SwiftName: "OkioBufferedSink"
+  Properties:
+  - Name: "buffer"
+    PropertyKind: "Instance"
+    SwiftName: "buffer"
+    Type: "GBSOkioBuffer * _Nonnull"
+  Methods:
+  - Selector: "emit"
+    MethodKind: "Instance"
+    SwiftName: "emit()"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+  - Selector: "emitCompleteSegments"
+    MethodKind: "Instance"
+    SwiftName: "emitCompleteSegments()"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+  - Selector: "writeSource:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "writeSource:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:offset:byteCount:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeByteString:"
+    MethodKind: "Instance"
+    SwiftName: "write(byteString:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "writeByteString:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "write(byteString:offset:byteCount:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeSource:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:byteCount:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioSource> _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "writeAllSource:"
+    MethodKind: "Instance"
+    SwiftName: "writeAll(source:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioSource> _Nonnull"
+  - Selector: "writeByteB:"
+    MethodKind: "Instance"
+    SwiftName: "writeByte(b:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeDecimalLongV:"
+    MethodKind: "Instance"
+    SwiftName: "writeDecimalLong(v:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeHexadecimalUnsignedLongV:"
+    MethodKind: "Instance"
+    SwiftName: "writeHexadecimalUnsignedLong(v:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeIntI:"
+    MethodKind: "Instance"
+    SwiftName: "writeInt(i:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeIntLeI:"
+    MethodKind: "Instance"
+    SwiftName: "writeIntLe(i:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeLongV:"
+    MethodKind: "Instance"
+    SwiftName: "writeLong(v:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeLongLeV:"
+    MethodKind: "Instance"
+    SwiftName: "writeLongLe(v:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "writeShortS:"
+    MethodKind: "Instance"
+    SwiftName: "writeShort(s:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeShortLeS:"
+    MethodKind: "Instance"
+    SwiftName: "writeShortLe(s:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "writeUtf8String:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8(string:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "writeUtf8String:beginIndex:endIndex:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8(string:beginIndex:endIndex:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "writeUtf8CodePointCodePoint:"
+    MethodKind: "Instance"
+    SwiftName: "writeUtf8CodePoint(codePoint:)"
+    ResultType: "id<GBSOkioBufferedSink> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+- Name: "GBSOkioSource"
+  SwiftName: "OkioSource"
+  Methods:
+  - Selector: "closeAndReturnError:"
+    MethodKind: "Instance"
+    SwiftName: "close()"
+    ResultType: "BOOL"
+  - Selector: "readSink:byteCount:error:"
+    MethodKind: "Instance"
+    SwiftName: "read(sink:byteCount:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "timeout"
+    MethodKind: "Instance"
+    SwiftName: "timeout()"
+    ResultType: "GBSOkioTimeout * _Nonnull"
+- Name: "GBSOkioCloseable"
+  SwiftName: "OkioCloseable"
+  Methods:
+  - Selector: "closeAndReturnError:"
+    MethodKind: "Instance"
+    SwiftName: "close()"
+    ResultType: "BOOL"
+- Name: "GBSOkioSink"
+  SwiftName: "OkioSink"
+  Methods:
+  - Selector: "closeAndReturnError:"
+    MethodKind: "Instance"
+    SwiftName: "close()"
+    ResultType: "BOOL"
+  - Selector: "flushAndReturnError:"
+    MethodKind: "Instance"
+    SwiftName: "flush()"
+    ResultType: "BOOL"
+  - Selector: "timeout"
+    MethodKind: "Instance"
+    SwiftName: "timeout()"
+    ResultType: "GBSOkioTimeout * _Nonnull"
+  - Selector: "writeSource:byteCount:error:"
+    MethodKind: "Instance"
+    SwiftName: "write(source:byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+- Name: "GBSOkioBufferedSource"
+  SwiftName: "OkioBufferedSource"
+  Properties:
+  - Name: "buffer"
+    PropertyKind: "Instance"
+    SwiftName: "buffer"
+    Type: "GBSOkioBuffer * _Nonnull"
+  Methods:
+  - Selector: "exhausted"
+    MethodKind: "Instance"
+    SwiftName: "exhausted()"
+    ResultType: "BOOL"
+  - Selector: "indexOfB:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(b:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int8_t"
+  - Selector: "indexOfB:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(b:fromIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int8_t"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "indexOfB:fromIndex:toIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(b:fromIndex:toIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "int8_t"
+    - Position: 1
+      Type: "int64_t"
+    - Position: 2
+      Type: "int64_t"
+  - Selector: "indexOfBytes:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(bytes:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "indexOfBytes:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOf(bytes:fromIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "indexOfElementTargetBytes:"
+    MethodKind: "Instance"
+    SwiftName: "indexOfElement(targetBytes:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "indexOfElementTargetBytes:fromIndex:"
+    MethodKind: "Instance"
+    SwiftName: "indexOfElement(targetBytes:fromIndex:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "peek"
+    MethodKind: "Instance"
+    SwiftName: "peek()"
+    ResultType: "id<GBSOkioBufferedSource> _Nonnull"
+  - Selector: "rangeEqualsOffset:bytes:"
+    MethodKind: "Instance"
+    SwiftName: "rangeEquals(offset:bytes:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+  - Selector: "rangeEqualsOffset:bytes:bytesOffset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "rangeEquals(offset:bytes:bytesOffset:byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+    - Position: 1
+      Type: "GBSOkioByteString * _Nonnull"
+    - Position: 2
+      Type: "int32_t"
+    - Position: 3
+      Type: "int32_t"
+  - Selector: "readSink:"
+    MethodKind: "Instance"
+    SwiftName: "read(sink:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "readSink:offset:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "read(sink:offset:byteCount:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+    - Position: 1
+      Type: "int32_t"
+    - Position: 2
+      Type: "int32_t"
+  - Selector: "readAllSink:"
+    MethodKind: "Instance"
+    SwiftName: "readAll(sink:)"
+    ResultType: "int64_t"
+    Parameters:
+    - Position: 0
+      Type: "id<GBSOkioSink> _Nonnull"
+  - Selector: "readByte"
+    MethodKind: "Instance"
+    SwiftName: "readByte()"
+    ResultType: "int8_t"
+  - Selector: "readByteArray"
+    MethodKind: "Instance"
+    SwiftName: "readByteArray()"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "readByteArrayByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readByteArray(byteCount:)"
+    ResultType: "GBSKotlinByteArray * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "readByteString"
+    MethodKind: "Instance"
+    SwiftName: "readByteString()"
+    ResultType: "GBSOkioByteString * _Nonnull"
+  - Selector: "readByteStringByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readByteString(byteCount:)"
+    ResultType: "GBSOkioByteString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "readDecimalLong"
+    MethodKind: "Instance"
+    SwiftName: "readDecimalLong()"
+    ResultType: "int64_t"
+  - Selector: "readFullySink:"
+    MethodKind: "Instance"
+    SwiftName: "readFully(sink:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSKotlinByteArray * _Nonnull"
+  - Selector: "readFullySink:byteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readFully(sink:byteCount:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "GBSOkioBuffer * _Nonnull"
+    - Position: 1
+      Type: "int64_t"
+  - Selector: "readHexadecimalUnsignedLong"
+    MethodKind: "Instance"
+    SwiftName: "readHexadecimalUnsignedLong()"
+    ResultType: "int64_t"
+  - Selector: "readInt"
+    MethodKind: "Instance"
+    SwiftName: "readInt()"
+    ResultType: "int32_t"
+  - Selector: "readIntLe"
+    MethodKind: "Instance"
+    SwiftName: "readIntLe()"
+    ResultType: "int32_t"
+  - Selector: "readLong"
+    MethodKind: "Instance"
+    SwiftName: "readLong()"
+    ResultType: "int64_t"
+  - Selector: "readLongLe"
+    MethodKind: "Instance"
+    SwiftName: "readLongLe()"
+    ResultType: "int64_t"
+  - Selector: "readShort"
+    MethodKind: "Instance"
+    SwiftName: "readShort()"
+    ResultType: "int16_t"
+  - Selector: "readShortLe"
+    MethodKind: "Instance"
+    SwiftName: "readShortLe()"
+    ResultType: "int16_t"
+  - Selector: "readUtf8"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "readUtf8ByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8(byteCount:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "readUtf8CodePoint"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8CodePoint()"
+    ResultType: "int32_t"
+  - Selector: "readUtf8Line"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8Line()"
+    ResultType: "NSString * _Nullable"
+  - Selector: "readUtf8LineStrict"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8LineStrict()"
+    ResultType: "NSString * _Nonnull"
+  - Selector: "readUtf8LineStrictLimit:"
+    MethodKind: "Instance"
+    SwiftName: "readUtf8LineStrict(limit:)"
+    ResultType: "NSString * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "requestByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "request(byteCount:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "requireByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "require(byteCount:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
+  - Selector: "selectOptions:"
+    MethodKind: "Instance"
+    SwiftName: "select(options:)"
+    ResultType: "int32_t"
+    Parameters:
+    - Position: 0
+      Type: "NSArray<GBSOkioByteString *> * _Nonnull"
+  - Selector: "selectOptions_:"
+    MethodKind: "Instance"
+    SwiftName: "select(options:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "NSArray<id> * _Nonnull"
+  - Selector: "skipByteCount:"
+    MethodKind: "Instance"
+    SwiftName: "skip(byteCount:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int64_t"
