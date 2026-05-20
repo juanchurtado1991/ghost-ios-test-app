@@ -48,7 +48,7 @@ plugins {
     id("co.touchlab.skie") version "0.9.5" // Optional: exports Kotlin types as native Swift types
 }
 
-val ghostVersion = "1.1.14"
+val ghostVersion = "1.1.16"
 
 kotlin {
     val xcf = XCFramework("YourModuleName")
