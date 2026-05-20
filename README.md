@@ -1,8 +1,18 @@
 # 👻 Ghost iOS Benchmark Dashboard
 
-This is the official testing laboratory for **Ghost Serialization** in native iOS environments. This application serves as both a performance validation tool and a blueprint for production-grade Ghost integrations on iOS.
+This is the official testing laboratory for **Ghost Serialization** in native iOS environments. It serves as both a performance validation tool and a blueprint for production-grade Ghost integrations on iOS.
 
-> **This repo is self-contained.** Clone it, open in Xcode, press ▶️ — no Kotlin, Gradle, or external dependencies required. The pre-compiled XCFramework is bundled.
+**Ghost version:** `1.1.16` from [Maven Central](https://central.sonatype.com/search?q=g:com.ghostserializer).
+
+> **This repo is self-contained.** Clone it, open in Xcode, press ▶️ — no Kotlin, Gradle, or network setup required. The pre-compiled `GhostBenchmarkShared.xcframework` (built with Ghost `1.1.16`) is bundled in the repository.
+
+**Related projects:**
+
+| Project | Description |
+|:---|:---|
+| [ghost-serializer](https://github.com/juanchurtado1991/ghost-serializer) | Main library, KMP sample app, JVM benchmarks |
+| [ghost-android-test-app](https://github.com/juanchurtado1991/ghost-android-test-app) | On-device Android benchmark vs Gson, Moshi, KSer |
+| [ghost-spring-boot-test-app](https://github.com/juanchurtado1991/ghost-spring-boot-test-app) | Spring Boot benchmark vs Jackson |
 
 ---
 
@@ -17,26 +27,35 @@ This is the official testing laboratory for **Ghost Serialization** in native iO
 7. Wait for the warmup and benchmark phases to complete (~30–60 seconds at 20 pages).
 8. Results appear in the **Performance Insight** card.
 
-### Optional: Alamofire Competitor
+### Optional: Alamofire competitor
 
-Alamofire is included as an optional competitor. To enable it:
+Alamofire is an optional competitor. To enable it:
 
 1. In Xcode: **File → Add Package Dependencies...**
 2. Paste: `https://github.com/Alamofire/Alamofire.git` and add it.
-3. In your target's **General → Frameworks**, ensure you add `Alamofire` (not `AlamofireDynamic`).
+3. In your target's **General → Frameworks**, add `Alamofire` (not `AlamofireDynamic`).
 4. **Shift + Cmd + K** (Clean Build Folder), then **Cmd + R**.
 
-The `Alamofire + Ghost` and `Alamofire + Codable` rows will automatically appear in the **REAL-WORLD (NETWORK)** section.
+The `Alamofire + Ghost` and `Alamofire + Codable` rows appear in the **REAL-WORLD (NETWORK)** section.
 
 ---
 
-## 🛠️ How to Use Ghost in Your Own iOS Project
+## 📦 Using Ghost in your own iOS project (Maven Central)
 
-Ghost is a Kotlin Multiplatform library published on **Maven Central**. To use it on iOS, you create a small KMP module that defines your models, and Ghost generates a pre-compiled XCFramework that Swift consumes as a regular Apple framework.
+Ghost is a Kotlin Multiplatform library. On iOS you define models in a small KMP module, build an **XCFramework**, and call it from Swift.
 
-### Step 1 — Create a KMP Module
+> **Coordinates:** Maven artifacts use `com.ghostserializer`. Kotlin imports use `com.ghost.serialization` (package namespace).
 
-Create a new Kotlin Multiplatform module (e.g., `shared-ios`) in your project. If you already have a KMP shared module, you can use that.
+### Maven Central artifacts (`1.1.16`)
+
+| Artifact | Purpose |
+|:---|:---|
+| `com.ghostserializer:ghost-api` | Annotations (`@GhostSerialization`, etc.) |
+| `com.ghostserializer:ghost-serialization` | Runtime engine |
+| `com.ghostserializer:ghost-compiler` | KSP code generator |
+| `com.ghostserializer.ghost` (Gradle plugin) | Auto-wires KSP + dependencies |
+
+### Step 1 — KMP module + Ghost plugin (recommended)
 
 ```kotlin
 // shared-ios/build.gradle.kts
@@ -44,11 +63,12 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
     kotlin("multiplatform")
-    id("com.google.devtools.ksp")    // Required for Ghost's code generation
-    id("co.touchlab.skie") version "0.9.5" // Optional: exports Kotlin types as native Swift types
+    id("com.ghostserializer.ghost") version "1.1.16"
 }
 
-val ghostVersion = "1.1.16"
+ghost {
+    version.set("1.1.16")
+}
 
 kotlin {
     val xcf = XCFramework("YourModuleName")
@@ -57,8 +77,8 @@ kotlin {
         binaries.framework {
             baseName = "YourModuleName"
             xcf.add(this)
-            export("com.ghost.serialization:ghost-serialization:$ghostVersion")
-            export("com.ghost.serialization:ghost-api:$ghostVersion")
+            export("com.ghostserializer:ghost-serialization:1.1.16")
+            export("com.ghostserializer:ghost-api:1.1.16")
         }
     }
 
@@ -66,45 +86,56 @@ kotlin {
         binaries.framework {
             baseName = "YourModuleName"
             xcf.add(this)
-            export("com.ghost.serialization:ghost-serialization:$ghostVersion")
-            export("com.ghost.serialization:ghost-api:$ghostVersion")
+            export("com.ghostserializer:ghost-serialization:1.1.16")
+            export("com.ghostserializer:ghost-api:1.1.16")
         }
     }
 
     sourceSets {
         val commonMain by getting {
-            // KSP generates serializers into this directory
             kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
-            dependencies {
-                api("com.ghost.serialization:ghost-serialization:$ghostVersion")
-                api("com.ghost.serialization:ghost-api:$ghostVersion")
-            }
         }
-
         val iosMain by creating { dependsOn(commonMain) }
         val iosArm64Main by getting { dependsOn(iosMain) }
         val iosSimulatorArm64Main by getting { dependsOn(iosMain) }
     }
 }
 
-// Tell Ghost the module name (used for the generated registry class)
-ksp { arg("ghost.moduleName", "your_module") }
-
-dependencies {
-    add("kspCommonMainMetadata", "com.ghost.serialization:ghost-compiler:$ghostVersion")
+ksp {
+    arg("ghost.moduleName", "your_module")
 }
+```
 
-// Ensure KSP metadata runs before compilation
-tasks.configureEach {
-    if ((name.startsWith("compile") || name.startsWith("ksp")) && name != "kspCommonMainKotlinMetadata") {
-        dependsOn(tasks.matching { it.name == "kspCommonMainKotlinMetadata" })
+`settings.gradle.kts` in your KMP project:
+
+```kotlin
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 ```
 
-### Step 2 — Define Your Models
+The Ghost plugin adds `ghost-api`, `ghost-serialization`, and `ghost-compiler` automatically. No `mavenLocal()` required.
 
-Annotate your data classes with `@GhostSerialization` in `commonMain`. Ghost's KSP processor will generate optimized, zero-reflection serializers at compile time.
+<details>
+<summary>Manual KSP setup (without Gradle plugin)</summary>
+
+```kotlin
+val ghostVersion = "1.1.16"
+
+// In commonMain dependencies:
+api("com.ghostserializer:ghost-serialization:$ghostVersion")
+api("com.ghostserializer:ghost-api:$ghostVersion")
+
+// In dependencies block:
+add("kspCommonMainMetadata", "com.ghostserializer:ghost-compiler:$ghostVersion")
+```
+
+</details>
+
+### Step 2 — Define your models
 
 ```kotlin
 // shared-ios/src/commonMain/kotlin/com/example/models/User.kt
@@ -129,9 +160,9 @@ data class Address(
 )
 ```
 
-### Step 3 — Create a Bridge for Swift
+### Step 3 — Bridge for Swift (manual registry)
 
-Kotlin/Native does **not** support `ServiceLoader` (used for automatic registry discovery on JVM/Android). You must register the KSP-generated module registry once and expose typed methods for Swift:
+Kotlin/Native does **not** support `ServiceLoader`. Register the KSP-generated registry once at startup:
 
 ```kotlin
 // shared-ios/src/commonMain/kotlin/com/example/GhostBridge.kt
@@ -144,10 +175,7 @@ import com.ghost.serialization.generated.GhostModuleRegistry_your_module
 object GhostBridge {
 
     fun prewarm() {
-        // Mandatory on iOS: register the KSP-generated registry manually
-        try {
-            Ghost.addRegistry(GhostModuleRegistry_your_module())
-        } catch (_: Exception) { }
+        Ghost.addRegistry(GhostModuleRegistry_your_module.INSTANCE)
         Ghost.prewarm()
     }
 
@@ -158,8 +186,7 @@ object GhostBridge {
 }
 ```
 
-> **Why `GhostModuleRegistry_your_module`?**  
-> The class name is generated from the `ghost.moduleName` KSP argument you set in Step 1. If you used `ksp { arg("ghost.moduleName", "my_app") }`, the class will be `GhostModuleRegistry_my_app`.
+> **Registry class name:** Generated from `ghost.moduleName`. With `ksp { arg("ghost.moduleName", "my_app") }` → `GhostModuleRegistry_my_app.INSTANCE`.
 
 ### Step 4 — Build the XCFramework
 
@@ -167,66 +194,62 @@ object GhostBridge {
 ./gradlew :shared-ios:assembleYourModuleNameReleaseXCFramework
 ```
 
-The output will be in `shared-ios/build/XCFrameworks/release/YourModuleName.xcframework`.
+Output: `shared-ios/build/XCFrameworks/release/YourModuleName.xcframework`.
 
 ### Step 5 — Add to Xcode
 
-You have two options:
-
 **Option A — Local Swift Package (recommended):**
-1. Create a `Package.swift` next to the XCFramework:
-   ```swift
-   // swift-tools-version: 5.9
-   import PackageDescription
 
-   let package = Package(
-       name: "YourModuleName",
-       platforms: [.iOS(.v15)],
-       products: [
-           .library(name: "YourModuleName", targets: ["YourModuleName"])
-       ],
-       targets: [
-           .binaryTarget(name: "YourModuleName", path: "YourModuleName.xcframework")
-       ]
-   )
-   ```
-2. In Xcode: **File → Add Package Dependencies... → Add Local...** → select the directory containing `Package.swift`.
+```swift
+// swift-tools-version: 5.9
+import PackageDescription
 
-**Option B — Drag & Drop:**
-1. Drag the `.xcframework` folder into your Xcode project.
-2. Set it to **Embed & Sign** in your target's **General → Frameworks**.
+let package = Package(
+    name: "YourModuleName",
+    platforms: [.iOS(.v15)],
+    products: [
+        .library(name: "YourModuleName", targets: ["YourModuleName"])
+    ],
+    targets: [
+        .binaryTarget(name: "YourModuleName", path: "YourModuleName.xcframework")
+    ]
+)
+```
+
+In Xcode: **File → Add Package Dependencies... → Add Local...**
+
+**Option B — Drag & drop:** Add `.xcframework` → **Embed & Sign**.
 
 ### Step 6 — Use in Swift
 
 ```swift
 import YourModuleName
 
-// Call prewarm once at app startup (e.g., in AppDelegate or @main)
 GhostBridge.shared.prewarm()
 
-// Deserialize from JSON String
 let user = GhostBridge.shared.deserializeUser(json: jsonString)
 
-// Deserialize from URLSession response
+// URLSession: prefer String over raw Data → KotlinByteArray (faster)
 let (data, _) = try await URLSession.shared.data(from: url)
 let jsonStr = String(data: data, encoding: .utf8)!
 let user = GhostBridge.shared.deserializeUser(json: jsonStr)
 
-// Serialize back to String
 let json = GhostBridge.shared.serializeUser(value: user)
 ```
 
-> **Tip:** Always pass `String` to Ghost instead of raw bytes. The `Data → KotlinByteArray` conversion in Swift copies byte-by-byte and is slower than `Data → String → Ghost.deserialize(string)`.
+> **Tip:** `Data → String → Ghost.deserialize` is faster than passing raw bytes through the Kotlin/Native bridge.
+
+Full library docs: [ghost-serializer README](https://github.com/juanchurtado1991/ghost-serializer#usage---ios-native--swift).
 
 ---
 
-## 📊 Benchmark Results — Native iOS (iPhone Simulator, Apple Silicon)
+## 📊 Benchmark results — Native iOS (iPhone Simulator, Apple Silicon)
 
-> **Methodology:** 100 measured iterations after a 200-iteration warmup. Payload: Rick & Morty API, 20 pages (~2,000 objects, ~800KB JSON). Network benchmarks use `MockURLProtocol` for local data replay — no network variability. Memory for Ghost is the average GC working set per iteration (Kotlin/Native GC, lazy collection). Memory for Codable shows `ARC ✓` because Swift ARC frees allocations instantly, before measurement.
+> **Methodology:** 100 measured iterations after a 200-iteration warmup. Payload: Rick & Morty API, 20 pages (~2,000 objects, ~800 KB JSON). Network benchmarks use `MockURLProtocol` (local replay). Ghost memory is GC working set per iteration; Codable shows `ARC ✓` because Swift ARC frees before measurement.
 
-### Parse (Deserialization)
+### Parse (deserialization)
 
-| Engine | Mode | Avg Latency | Memory |
+| Engine | Mode | Avg latency | Memory |
 |:---|:---:|:---:|:---:|
 | **Ghost** | String | **1.54 ms** | GC ~413 KB |
 | Apple Codable | String | 2.64 ms | ARC ✓ |
@@ -235,9 +258,9 @@ let json = GhostBridge.shared.serializeUser(value: user)
 | **Ghost** | Streaming | **0.92 ms** | GC ~200 KB |
 | Apple Codable | Streaming | 2.54 ms | ARC ✓ |
 
-### Serialize (Serialization)
+### Serialize (serialization)
 
-| Engine | Mode | Avg Latency | Memory |
+| Engine | Mode | Avg latency | Memory |
 |:---|:---:|:---:|:---:|
 | **Ghost** | String | **1.28 ms** | GC ~587 KB |
 | Apple Codable | String | 2.71 ms | 5 KB |
@@ -246,7 +269,7 @@ let json = GhostBridge.shared.serializeUser(value: user)
 | **Ghost** | Streaming | **0.40 ms** | GC ~209 KB |
 | Apple Codable | Streaming | 2.91 ms | ARC ✓ |
 
-### Real-World Network Stack
+### Real-world network stack
 
 | Stack | Latency | Memory |
 |:---|:---:|:---:|
@@ -255,34 +278,34 @@ let json = GhostBridge.shared.serializeUser(value: user)
 | **Alamofire + Ghost** | **2.45 ms** | GC ~510 KB |
 | Alamofire + Codable | 3.03 ms | 1 KB |
 
-### Key Takeaways
+### Key takeaways
 
-- Ghost is **~41% faster** than Apple Codable for String parsing (`1.54ms` vs `2.64ms`).
-- Ghost is **~7× faster** than Apple Codable for Byte serialization (`0.39ms` vs `2.82ms`).
-- Ghost wins **all 8 benchmarks**, including real-world network stacks with both URLSession and Alamofire.
-- The GC working set (`GC ~X KB`) is **transient** — Kotlin/Native's GC reclaims it shortly after. Codable's `ARC ✓` means memory was freed before measurement, not that zero memory was used.
+- Ghost is **~41% faster** than Codable for String parsing (`1.54 ms` vs `2.64 ms`).
+- Ghost is **~7× faster** than Codable for Byte serialization (`0.39 ms` vs `2.82 ms`).
+- Ghost wins **all 8 benchmarks**, including URLSession and Alamofire stacks.
+- `GC ~X KB` is **transient** (Kotlin/Native batch GC). `ARC ✓` means freed before snapshot, not zero allocation.
 
-### Memory: ARC vs. GC
+### Memory: ARC vs GC
 
-| | Swift (Apple Codable) | Ghost (Kotlin/Native) |
+| | Swift (Codable) | Ghost (Kotlin/Native) |
 |:---|:---|:---|
 | **Model** | ARC — instant release | GC — lazy batch collection |
 | **Measurement** | Freed before snapshot → ~0 KB | Visible until GC runs → ~X KB |
-| **Reality** | Both use similar memory per operation. ARC frees immediately; GC collects in batches. |
+| **Reality** | Similar per-operation cost; different visibility in benchmarks |
 
 ---
 
-## 🏁 iOS vs. Android Comparison
+## 🏁 iOS vs Android (Ghost)
 
-| Operation | iOS Ghost | Android Ghost | Advantage |
-|:---|:---:|:---:|:---:|
-| Parse String | 1.54 ms | 4.70 ms | iOS faster |
-| Parse Bytes | 0.86 ms | 4.18 ms | iOS faster |
-| Write Bytes | 0.39 ms | 2.22 ms | iOS faster |
-| Network | 2.27 ms | 5.70 ms | iOS faster |
+| Operation | iOS Ghost | [Android Ghost](https://github.com/juanchurtado1991/ghost-android-test-app) | Notes |
+|:---|:---:|:---:|:---|
+| Parse String | 1.54 ms | 4.70 ms | Apple Silicon vs ART |
+| Parse Bytes | 0.86 ms | 4.18 ms | |
+| Write Bytes | 0.39 ms | 2.22 ms | |
+| Network | 2.27 ms | 5.70 ms | |
 
-> iOS runs on Apple Silicon (ARM64), which has different characteristics than Android's ART runtime. Both platforms show Ghost winning vs. the platform-native serializer.
+Both platforms beat the platform-native serializer in these benchmarks.
 
 ---
 
-*Developed with ❤️ by the Ghost Serialization team.* 👻
+*Part of the [Ghost Serialization](https://github.com/juanchurtado1991/ghost-serializer) ecosystem.* 👻
